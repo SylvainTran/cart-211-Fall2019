@@ -1,0 +1,26 @@
+/* Whole page layout */
+html{
+	background-color: black;
+	color: yellow;
+	text-align: center;
+	font-family: 'Chilanka', cursive;
+}
+
+/* The Reading Table inside the body is not centered. */
+.centeredList li{
+	text-align: initial;
+	color: white;
+}
+
+/* Temporary color change for the inner list. */
+.innerList li{
+	color: blue;
+	
+}
+
+/* Flexbox starts here. Main container...*/
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
