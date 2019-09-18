@@ -1,0 +1,6 @@
+/* JSON file containing the reading summaries */
+
+let readings = {
+	""
+
+};
