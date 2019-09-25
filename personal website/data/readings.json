@@ -1,0 +1,244 @@
+[
+    { "september12-2019" : { "September 12th, 2019: Wizards, Bureaucrats, Warriors, Hackers: Writing the History of the Internet":
+
+    "In this article, Rosenzweig discusses the diverging accounts behind the origins of the Internet, outlining the limitations of each
+    account and the implications behind the motives that may have driven their development.
+
+    The sociocultural or contextualist approach describe the context of the years corresponding to the usual years associated with the birth of the Internet, namely the 60s,
+    as an important clue: in those years was the Cold War and military tensions escalated between the US and Russia.
+
+    Because of its perceived utility, the development of the Internet became an important motive as the need for the US military to stay at the top of the technology game
+    grew by the years.
+
+    Great Men Theories
+
+    Competing with sociocultural theories of the origins of the Internet, such as the military establishment's role in budgeting and directing
+    Internet technology, are other sources that recount the origins of the Internet such as Kathy Hafner and Matthew Lyon's book, <em>Where Wizards
+    Stay Up Late: The Origins of the Internet.</em>
+    in which great men are used to explain the development of the Internet.
+
+    In this theory, Bolt Beraneck and Newman and their contract work with DARPA and DARPANET are attributed as one of the great independent variables
+    leading to the successful development of Internet.
+
+    Distributed Networks and Other Tech
+
+    One of the most significant technologies developped that contributed to the Internet was <strong>packets </strong>.
+
+
+    <h3>Technolibertarianism: Currently writing </h3>
+    <h3>Dominance of the email and Usenet: Privatization: Currently writing </h3>"
+        } 
+    },
+
+    {
+        "september19-2019": { "September 19th, 2019 - The Time Canada Wanted Its Own Internet Because It Thought the US Would Mess It Up - by Daniel Joseph": "SUMMARY
+    
+        In the �70s, Canada envisaged to have its own Internet network which they called the Trans-Canada Computer Communications Network (TCCN).
+        One of the chief concerns behind staying with the US based Internet was the fear that eventually the US would monopolize their share of the Internet-market, leaving Canadians with a lesser portion of its dividends.
+        
+        SCIENCE COUNCIL OF CANADA
+        
+        So the Science Council of Canada, in August 1971, drafted ideas about an Internet which would allow research computers to be linked at diverse universities with casual computers. This would allow engineers to work with other people at scale. The philosophy runs opposite to the ARPANET which was funded upon military concerns at a large scale.
+        
+        The TCCN called for a federated system�something akin to Hydro Quebec.
+        
+        POLITICAL INFLUENCES
+        
+        The author discusses the role that liberalism played in the �70s, and the influence of what was called �technological sovereignty�. The idea is described as an effort at the UN level to resist the idea that information should flow freely across borders in a way that these countries wouldn�t have any defence against the foreign American companies to come in and extract whatever data they were producing. The grounds for this level of concern were economic and social � Canadian national interest. The concern was that the network would serve national interest, not the other way around, to the forces of local and continental market forces. This relates to a kind of political structure and orientation that makes you think about the influences that can drive the development of technology that we take for granted.
+        
+        CONCERN OVER PRIVACY
+        
+        The concern over privacy of data is raised, even with the TCCN. Credit-rating agencies sell information about citizens� data, and there is a risk that potentially Canadian citizen�s data would be victimized under US-based interests of privatization and commodification of personal information.
+        
+        The idea was abandoned in 1973, moving towards incentive structures for Canada�s computer industry, such as preference for Federal contracts and import tariffs on foreign technology. A �96 paper mentioned there was a pushback from the provinces over the federal government, controlling the Internet. CANUnet too was abandoned in �72.
+        
+        PRESENT DAY ISSUES RELATED
+        
+        Now Cambridge Analytica show these issues weren�t unfounded. 
+        NSA intercepted communication between users and corporate databases.
+        Massive concentration of money and power from coroporations such as Micrsofot and Tencent. US or European coroporations reveal that they own the most profitable apps.
+        
+        Canada is still dependent on US-based companies like Facebook, Google.
+        Some countries experiment with their own national initiatives for social media like Papua New Guinea that will try to block out Facebook for a month.
+        
+        <strong>Daniel Joseph </strong>"
+        },
+    
+        { "september19-2019": "<h2 id="19sept192">September 19th, 2019: From Counterculture to Cyberculture Stewart Brand, the Whole Earth Network, and the Rise of Digital Utopianism - By Fred Turner	</h2>							
+        <p>							
+        SUMMARY
+        
+        imagining the use of computers in countercultural terms.
+        
+        In a 1995 Time Magazine, Stewart Brand argued that the personal computer revolution and the Internet had grown directly out of counterculture (hippies).
+        Decentralization and personalization + information�s transformative potential 
+        
+        Esp. Telling of Apple Macintosh 1984, branded as a personal device to tear down bureaucracies and achieve intellectual freedom.	
+        
+        FIRST PHASE (1968-1972)
+            
+        Two Communities around Whole Earth Catalog Offices in Menlo Park. 
+        1) Stanford Research Institute: Engineers preoccupied with human-computer integration
+        
+        2) Whole Earth Catalog and its countercultural communities. Focused on the individual and collective transformation in a new communalist vein.
+        
+        SECOND PHASE
+            
+        Stewart turned to Gregory Bateson, who imagined the material world as an information system. They began to imagine a new kind of home for themselves--space colonies.
+        
+        THIRD PHASE
+        
+        In the late 70s, these ideas were ended and left place to the back-to-the-land movement�s technophilia, and with it the collapse of New Communalism as a social movement.
+        
+        DEVELOPMENT OF MACHINES
+        
+        Late 1950�s, mainframe computers used punch cards and you needed to feed this to the machine�s managers.
+        
+        A decade later, Digital Equipment Corporation�s PDP-10 allowed users to store files on tape and access their own files without the intervention of other personnel. This accrued the feeling of owning the machine. 
+        
+        As historian Paul Ceruzzi detailed, by 1972, all the features associated with personal computers such as small computers, microprocessors, keyboard-based interfaces, individual usability, and the sensation of interactivity were in place.
+        
+        SPARKING THE DESIRE TO USE PERSONAL COMPUTERS
+        
+        The development of these technologies alone did not suffice to create the popular perception of personalness with computers. The notion that comps might empower individuals and so transform their social worlds had to be linked with the machines themselves.
+        
+        Two dominant accounts of how this happened:
+        
+            1. Computer interface facilitated shifts in use patterns, which in turn allowed users to imagine and build new forms of interfaces.
+                Thierry Bardini suggested that since the 40s, computers have seen the development of a dynamic personalization for both the computer and the user.
+                Paul Ceruzzi said that personal computing emerged when time-sharing machines made it possible to imagine giving public users direct access to computers. 
+                
+            2. Notion of a computer as a tool for personal and communal transformation first came to life outside the computer industry, among an insurgent group of hobbyists with countercultural loyalties. Homebrew Computer Club and Apple Computer.
+        
+        Both of these accounts are true, but neither are complete. Engineers lived since by side with hobbyists and were surrounded by counter cultural institutions. Whole Earth Catalog in Menlo Park.
+        
+        A NEW RELIGION/SAVIOR OF MANKIND: COMPUTERS
+        
+        The augmentation Resarch Center (ARC) at the Stanford Research Institute (SRI) and Xerox�s Palo Alto Reserach Center (PARC) + Computer Hobbyists affiliated with the People�s Computer Company  + Homebrew Computer Club, Stewart Brand moved between those groups. 
+        Douglas Engelbart�s ARC group, computers had long been viewed as helpers of human intellectual capacities. In a 1946 article, Vannevar Bush�s Atlantic Monthly article, �As we May think�, Bush argued that the same scientists who had just helped win World War II would now harness the power of the cheap electronics they had developed to create a new kind of information management.
+        
+        He viewed computers as the solution to the modern problems (i.e., world saving hyperboles) that scientists and engineers faced, such as rapid food production or eradication of insects. Computers allowed for better information management and control of human organizations. The battlefield so phrased, shifted to the workplace. 
+        
+        
+        THE ON-LINE SYSTEM (NLS)
+        
+        The question is still, what role do computers have in human society? Why must we promote them, etc. Starting from 1957, he and the SRI over the next decade invented a lot of devices that are now associated with most computers � mouses. 1966-68, the group developed a collaborative effort office computing environment known as the On-Line system (NLS system). This ystem included a mouse, a qwerty keyboard, and a CRT terminal. It also allowed its users the ability to work on a document simultaneously from multiple sites, to connect bits of text via hyperlinks, to jump from onepoint to another in the text, and to develop indexes of keywords that could be searched. This depended ona  time-machine computer, so it was like a physical LAN, but worked like a contemporary itnranet. 
+        
+        In the public, people still thought computers as massive calculating machines, but the NLS already offered a vision of computers as tools for collaboration and text processing. Unlike cold war ancestors, NLS computers were communication devices so direct antecedents of the personal computers to come. 
+        
+        All this owed a great deal to World War II research culture and to cybernetics in particular. 	
+        
+        The Memex and this NLS machine required a lot of integration between the user and machine. This kind of computer was viewed as a social organization tool that provided collective feedback. 
+        Already there was a common sense of networking/orientation, and the individual was embedded in that system complementarily, . . Cybenetic processes of communication. Overall, it aimed to imrpove office organization and also the evolution of human beings.
+        
+        But all of this ARC activity was funded by the ARPA. 
+        
+        THE NEW COMMUNALIST MOVEMENT AND THE ENGINEERS
+        
+        Information Processing Techniques Office (IPTO) headed by Joseph C. R. Licklider.
+        His 1960 paper, Man-Computer Symbiosis, was really influential and drove a lot of efforts in his office IPTO. 
+        
+        Licklider, like Bush and Engelbart, envisioned the computer as a communication device in which man would become part of a whole information system. It could benefit humanity as a whole. 
+        Data-processing would be very fast and unlike anything seen before. More hyperboles.
+        
+        Engelbart�s humanitarian ideals --<> transforming human consciousness. 
+        New communalist propaganda resonated well with this ideal. 
+        Engelbart�s group bore a strong resemblance to groups like USCO and MerryPranksters
+        Connections with LSD and EST movement early on already... very symapthetic to their cause.
+        
+        FIRST PUBLIC DEMO OF THE PERSONAL COMPUTER
+        
+        In 1968, Dec. 9, in a conference for computer engineers in San Francsisco (Computer Society�s Fall Joint Computer Conference), Stewart Brand videotaped the ARC group and that�s how they began their connection and later on the Whole Earth Catalog would publish a lot of ARC activity.
+        It was the first time that they could see a highly individualized, highly interactive computing system not based on crunching numbers but around the circulation of information and the building of workplace community.
+        Like the NLS system, the catalog linked several geographically distant groups together and allowed them to collaborate. 
+        
+        THE INFLUENCE OF WHOLE EARTH CATALOG
+        
+        So in the 70s, the Catalog came to model the potential integration of New Communalist ideals and information tech for resarchers at Xerox PARC. Founded in 70 to serve as a research lab for a recently acquired computer subsidiary. 
+        Within ten years, the researchers there had designed a computer for individual use (the Alto), and internal network to link these computers together (the first Ethernet), a graphical user interface, and the laser printer etc.
+        
+        These innovations grew out of a technical tradition associated with ARPA and ARC. Robert Taylor, one of the first Xerox hires, had led the ARPA�s Information Processing Techniques office since 66. Taylor recruited Bill English (inventor of the mouse) 
+        
+        ALAN KEY: HIS ROLE AT PARC
+        
+        Alan Key was recruited too from a graduate student symposium. His PhD dissertation on an interactive desktop computer, the Dynabook, would provide a vision for Xerox PARC�s pursuit of its own individualized computer, the Alto.
+        
+        Kay�s passion for creating a device which would be used for communication and creative expression was influenced by within the world of computer research, when his professor handed him a paper, the 1963 Ivan Sutherland MIT PhD dissertation, SketchPad: A Man-machine graphical Communications System. Also in 1968 Kay met with Seymourt Papert and got acquainted with LOGO programmin. He discovered visions of interactive, creative computing,... from centers of technological resaerch, far from Bay Area�s counterculture.
+        
+        He also read the Whole Earth Catalog in 1969...
+        By then, he had conceptualized the computer as a DIY tool, to be able to model ideas easily on the computer. A vision of technology as a source of individual and collective transformations and a Media format. Computers are language machines where content was the description of things.
+        The Catalog became an analogue to the computer, an information tool, and also as a hyperlinked information system. The Whole Earth Catalog became a paper prototype of the Internet.
+        
+        The first public widely available hobbyist computer, the Altar found itself on the first cover of the PCC (People�s Personal Computer). 
+        
+        PEER-TO-PEER TECH
+        
+        Felsenstein, who founded the Homebrew computer club, explained the influence of the Whole Earth Catalog and how it was seen as bible for the new secular religion of technology in America. In 1971, he joined Resource One, a gathering of former staffers from a volunteer switchboard and programmers who left University of California at Berkeley in protest of the invasion of Cambodia. At Resource One, they sought to establish public computer terminals in Bay Area, and create a peer-to-peer. 
+        
+        SKILL-SHARING FOR THE PEOPLE
+        
+        A 1975 issue of the People's Computer Company thus: "Such a horizontal system would allow the public to take advantage of the huge and largely untapped reservoir of skills and resources that resides with the people. . . . [It would] counteract the tendencies toward fragmentation and isolation so visible in today's society." 
+        The idea was that people needed to gain control over information and information systems.
+        70s, Felsenstein designed the Tom Swift Terminal which drove the creation of the Sol, one of the first 
+        early personal computers.
+        
+        STEWART BRAND�S INVOLVEMENT
+        
+        The rest of the article described Stewart Brand�s intervention in entrepreneurially bringing together the Xerox Parc and ARC research efforts to counterculture, especially Space War, to bring about his vision of the computer as being a personal social liberator and a tool of playful creation and interaction."
+        }     
+    },
+    { "september26-2019": {"Rachel Greene, Web Work - A History of Internet Art": 
+    "
+        NET.ART was a term invented by Slovenian artist Vuk Cosic in 1995. The term became viral in the art forums existing at the time.
+        Vuk Cosic and the early communities of artists strongly advocated a sense of collectivity or union. Online art was about communication.
+        
+        The article discusses the rise of .NET artists and somewhat iconic or cult-status websites such as Jodi.org, which helped 
+        establish new media based on the Internet. Russian artist Olia Lialina is one of the artists of that era who 
+        produced high-quality websites in terms of programming and used her work to recount somber themes.       
+    
+    "},
+
+    { "september26-2019" : {"The New World of Net Art - 
+        Facebook, Tumblr, Instagram, Vine, and other platforms are the jumping-off point for artists who blur the line between the virtual and the real
+        by Carolina A. Miranda (2013)."
+        : 
+        "
+        The article begins by recounting a fictional account of Facebook drama at UCLA Berkeley the which
+        was a performance piece by Ed Fornieles. The term narrative on crack was used to display the kind
+        of usage of this medium that this piece represented in the digital world. It consists of
+        taking a prominent media platform and subverting it. 
+
+        These online narratives are sometimes taken to the physical world; the same artist, Ed Fornieles,
+        sometimes builds sculptural frat-house sets matching his online narratives, that he then sells in
+        the range of $5,000 to $17,000 to collectors or art agencies.
+
+        The article highlights several physical museums that have started to display digital art.
+        The Light and Wire Gallery in LA, and the Super Art Modern Museum in France host curated
+        projects solely online. Transfer is another gallery that focuses on artists who are producing
+        digital work.
+
+        John Baldessari and ForYourArt produced In Still Life (2001-2010) which is an APP
+        that allows users to create their own version of Abraham van Beyeren (1667) painting
+        Banquet Still Life. This is somewhat unusual. 
+        
+        The article discusses increased involvement at the institutional level. The Whitney for example,
+        has been commissioning net art for its website for more than a decade. This spring, JODI 
+        created a 30-second animation that pops up on the site every day at sunrise and sunset. 
+        
+        Rhizome's Seven on Seven, is an annual conference that pairs seven prominent artists and seven technologists
+        for creative brainstorming sessions that sometimes result in works of art.
+        
+        Joe Hamilton collages digital graphics to create landscapes that are both synthetic and realistic
+        Montreal-based Jon Rafman uses Google Maps to find unusual photographs and then displays 
+        these in a Tumblr blog.
+
+        Various other artists are mentioned for having sold website art or other interesting mixes
+        of internet pop culture with their work to collectors, sometimes in the thousands of dollars.
+        "
+    }
+
+
+    }
+
+    }
+]
