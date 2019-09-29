@@ -73,6 +73,16 @@ footer{
 	 font-family: 'Bad Script', cursive;
 }
 
+.readingsDisplay{
+	display: flex;
+	justify-content: flex-start;
+	margin: 50%;
+}
+.treeDisplay{
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+}
 #threejsDisplay{ 
 	display: flex;
 	justify-content: flex-start;

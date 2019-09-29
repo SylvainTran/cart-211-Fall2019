@@ -18,14 +18,13 @@
     <header id="bannerIcon"><img src="./images/avatar2.png" alt="avatar" style="float:left;"></header>
     <div class="content-flex-container">
         <div class="first-flex-container">
-            <div id="readings" onclick="displayReadings();">Readings</div>
+            <div id="readings" onclick="loadTableOfReadings(); displayReadings();">Readings</div>
             <div id="projects" onclick="#">Projects</div>
             <div id="portfolio" onclick="#">Portfolio</div>
             <div id="roadmap" onclick="#">Roadmap</div>
             <div id="apps" onclick="#">Apps</div>
         </div>
-        <main>
-            <div id="readingsDisplay"></div>
+        <main class="mainDisplay">
         </main>
         <div id="threejsDisplay"></div>  
         <div id="warningBox"></div>             
