@@ -40,84 +40,110 @@ function loadTableOfReadings(){
 
 	treeParent.classList.add("treeDisplay");
 	let fieldsetTree = document.createElement("FIELDSET");
-	fieldsetTree.setAttribute("id", "fieldsetTreeView");
+	fieldsetTree.setAttribute("id", "fieldsetTreeView"); // TODO change to class if intends to re-use
 	let tree = "<ul id=\"readingsTreeView\">" +
 				    "<li><span class=\"caret\">First Class</span>" +
-			   "<ul class=\"nested\">" + //beginning of nested ul
-					"<li>Roy Rosenzweig, Writing the History of the Internet</li>" +
-					"<li>Daniel Joseph, The Time Canada Wanted Its Own Internet Because" +
-					"It Thought the US Would Mess It Up" + 
-					"</li>" + 
-					"<li><span class=\"caret\">Fred Turner, From Counterculture to Cyberculture</span>" +
-					"<li>Rachel Greene, Web Work: A History of Internet Art</li>" +
-					"<li>Carolina Miranda, The New World of Net Art</li>" + 
+			   		"<ul class=\"nested\">" + //beginning of nested ul
+						"<li>Roy Rosenzweig, Writing the History of the Internet</li>" +
+						"<li>Daniel Joseph, The Time Canada Wanted Its Own Internet Because" +
+						"It Thought the US Would Mess It Up" + 
+						"</li>" + 
+						"<li><span class=\"caret\">Fred Turner, From Counterculture to Cyberculture</span>" +
+						"<li>Rachel Greene, Web Work: A History of Internet Art</li>" +
+						"<li>Carolina Miranda, The New World of Net Art</li>" + 
+						"</ul>" +
 				"</ul>";//end of nested ul
 	fieldsetTree.innerHTML = tree;
 	treeParent.appendChild(fieldsetTree);
 }
 
 function loadAccordion(){
-	let readingDisplay = document.getElementById('readingsDisplay');
+	let treeParent = document.getElementsByClassName('treeDisplay')[0];
 	//Insertion of xml-parsed lore database
-	var mainDisplay = document.getElementById("MainDisplay");
-	var readingTitles = dataContainer.getElementsByTagName("readings");
-	var xLen = readingTitles.childNodes.length;
-	var y = readingTitles.firstChild;
+	let mainDisplay = document.getElementById("MainDisplay");
+	let xLen = dataContainer.firstChild.childNodes.length; // 11 in total, but we only need the elements that contain the readings
+	let iterator = dataContainer.firstChild.firstChild; // Placed at the 3rd level, <readings>
+	console.log(xLen + " elements found. Iterating...");
 
-	console.log(xLen + y);
-	var titles = "";
-	for(let i = 0; i < xlen; i++)
+	let titles = ""; // Contains the date of the classes (cart 211)
+	let readingTexts = []; // Contains the actual text
+
+	for(let i = 0; i < xLen; i++)
 	{
-		if(y.nodeType == 1)
+		if(iterator.nodeType === 1) // If it is an element tag
 		{
-			titles += y.nodeName.toUpperCase();
-			if(y.nodeName != "readings") titles += ",";
+			// Add it to the title array in uppercase format
+			titles += iterator.nodeName.toUpperCase();
+			// if there is a reading for that class
+			if(iterator.nodeName === "firstReading" || "secondReading")
+			{
+				readingTexts[i] = iterator.textContent;
+			}
 		}
-		y = y.nextSibling;
+		console.log(readingTexts[i]);
+		if(iterator.nodeName != "readings") titles += ", "; // if it's no longer a reading element, add a comma to the titles
+		iterator = iterator.nextSibling;
 	}
 
-	//parse the titles string
+	console.log("titles: " + titles);
+
+	// Parse the titles string
 	let tokenTitles = titles.split(",");
 	var titlesArray = [];
 
+	// Create the h2 titles
 	for(let i = 0; i < tokenTitles.length; i++)
 	{
-		titlesArray[i] = document.createElement("H5");
+		titlesArray[i] = document.createElement("H2");
 		//set an id attribute for event handling
 		titlesArray[i].setAttribute("id", tokenTitles[i]);
-		//titlesArray[i].setAttribute("onclick", "UnfoldChildren(this, readingTitles, xlen);");
+		//titlesArray[i].setAttribute("onclick", "UnfoldChildren(this, readingTitles, xLen);");
 		let textBlock = document.createTextNode(tokenTitles[i]);		
 		titlesArray[i].appendChild(textBlock);
+		console.log(titlesArray[i].firstChild);
 	}	
 
-	for(title in titlesArray )
+	// Append the accordions below the tree display, for each DOM element in the titlesArray
+	for(const title of titlesArray)
 	{
-		var accordionBt = document.createElement("BUTTON");
+		let accordionBt = document.createElement("BUTTON");
 		accordionBt.setAttribute("class", "accordion");
-		var panel = document.createElement("PANEL");
+		let panel = document.createElement("PANEL");
 		panel.setAttribute("class", "panel");
-		accordionBt.appendChild(titlesArray[title]);	
-		readingDisplay.appendChild(accordionBt);
-		readingDisplay.appendChild(panel);
+		//console.log(titlesArray[i].;
+		accordionBt.append(title);	
+		treeParent.appendChild(accordionBt);
+		treeParent.appendChild(panel);
 	}	
-	var acc = document.getElementsByClassName("accordion");
-	var i;
+
+	let j = 0;
+	// Fill texts in accordion
+	for(let i = 0; i < readingTexts.length; i++)
+	{
+		// Get all the panel by class date (first class etc.)
+		let panels = document.getElementsByClassName('panel');
+		panels[j++].append(readingTexts[i]);			
+	}
+
+	let acc = document.getElementsByClassName("accordion");
+	let i;
 
 	for(i = 0; i < acc.length; i++)
 	{
 		acc[i].addEventListener("click", function(){
 			this.classList.toggle("active");
-			var panelAcc = this.nextElementSibling;;
+			let panelAcc = this.nextElementSibling;;
 			if(panelAcc.style.maxHeight)
 			{
 				panelAcc.style.maxHeight = null;
 			}
 			else
 			{
-				panel.style.maxHeight = panel.scrollHeight + "px";
+				panelAcc.style.maxHeight = panelAcc.scrollHeight + "50px";
 			}
 		});
 	}	
+
 }
 
 /**

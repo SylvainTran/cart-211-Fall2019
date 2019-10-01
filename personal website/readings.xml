@@ -1,7 +1,4 @@
-<cart211>
-    <firstClass>
-        <readings>
-            <firstReading>
+<cart211><firstClass><firstReading>
                 In this article, Rosenzweig discusses the diverging accounts behind the origins of the Internet, outlining the limitations of each
                 account and the implications behind the motives that may have driven their development.
 
@@ -23,14 +20,7 @@
 
                 Distributed Networks and Other Tech
 
-                One of the most significant technologies developped that contributed to the Internet was packets.
-            </firstReading>
-        </readings>
-    </firstClass>
-    <secondClass>
-        <readings>
-            <firstReading>
-                In the �70s, Canada envisaged to have its own Internet network which they called the Trans-Canada Computer Communications Network (TCCN).
+                One of the most significant technologies developped that contributed to the Internet was packets.</firstReading></firstClass><secondClass><firstReading>In the �70s, Canada envisaged to have its own Internet network which they called the Trans-Canada Computer Communications Network (TCCN).
                 One of the chief concerns behind staying with the US based Internet was the fear that eventually the US would monopolize their share of the Internet-market, leaving Canadians with a lesser portion of its dividends.
                 
                 SCIENCE COUNCIL OF CANADA
@@ -58,14 +48,4 @@
                 Canada is still dependent on US-based companies like Facebook, Google.
                 Some countries experiment with their own national initiatives for social media like Papua New Guinea that will try to block out Facebook for a month.
                 
-                Daniel Joseph
-            </firstReading>
-            <secondReading>
-        
-            </secondReading>
-        </readings>            
-    </secondClass>
-    <thirdClass></thirdClass>
-    <fourthClass></fourthClass>
-    <fifthClass></fifthClass>
-</cart211>
+                Daniel Joseph</firstReading><secondReading></secondReading></secondClass><thirdClass><firstReading></firstReading><secondReading></secondReading></thirdClass><fourthClass></fourthClass><fifthClass></fifthClass></cart211>

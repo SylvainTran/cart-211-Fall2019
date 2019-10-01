@@ -40,6 +40,7 @@ html{
 */
 .first-flex-container {
 	display: flex;
+	cursor:  progress;
 	margin-left: 50px;
 	transition: width 2s, height 4s, transform 2s;
 	transition-timing-function: ease-out;
@@ -100,6 +101,7 @@ main{
 
 footer{
 	display: inline-block;
+	margin-bottom: 0px;
 	width: 100%;
 	text-align: center;
 	font-family: 'Bad Script', cursive;
@@ -112,9 +114,25 @@ footer{
 	border: 2px solid black;
 }
 
-#fieldsetTreeView{
-
+#readingsTreeView {
+	font-size: 15px;
+	width: 500px;
 }
+
+#readingsTreeView {
+	font-size: 15px;
+	width: 500px;
+}
+
+.nested li{
+	color: blue;
+}
+
+.nested li:hover{
+	color: red;
+	cursor: zoom-in;
+}
+
 .treeDisplay{
 	display: flex;
 	width: 100%;
@@ -123,4 +141,9 @@ footer{
 	display: flex;
 	justify-content: flex-start;
 	border: none;
+}
+
+.accordion, .panel{
+	margin-top: 50px;
+	width: 75%;
 }
