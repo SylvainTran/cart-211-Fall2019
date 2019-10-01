@@ -28,44 +28,11 @@ function createConnection(){
 
 /**
  
-	Fill the readingsDisplay div after the user clicks on the readings in the menu.
-	
-*/
-function displayReadings(){
-	console.log("Loading the XML into the website...");				
-
-    let notebook = dataContainer;
-	let readings = notebook.getElementsByTagName("readings");
-	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
-	let readingsDisplay = document.createElement('div');
-	readingsDisplay.classList.add('readingsDisplay');
-	mainDisplay.append(readingsDisplay);
-	console.log("Number of readings found: " + readings[0].childNodes.length);
-
-	// Create a new div element for each reading.
-	for(let i = 0; i < readings.length; i++){
-		if(readings[i].hasChildNodes()){
-			// loop through each each class's one or two readings
-			let children = readings[i].childNodes;
-			console.log("reading #" + i);
-
-			for(let j = 0; j < children.length; j++){
-				if(children[j].nodeName === "firstReading" || children[j].nodeName === "secondReading")
-				{
-					console.log("...reading # " + j + "...of reading # " + i);
-					readingsDisplay.append(children[j]);
-				}
-			}
-		}
-	}
-}
-
-/**
- 
 	Displays accordion for the table of readings.
 	
 */
 function loadTableOfReadings(){
+	console.log("Loading table of readings");
 	//Tree view
 	let treeParent = document.createElement('div');
 	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
@@ -93,10 +60,11 @@ function loadAccordion(){
 	let readingDisplay = document.getElementById('readingsDisplay');
 	//Insertion of xml-parsed lore database
 	var mainDisplay = document.getElementById("MainDisplay");
-	var readingTitles = document.getElementsByTagName("readings")[0];
+	var readingTitles = dataContainer.getElementsByTagName("readings");
 	var xLen = readingTitles.childNodes.length;
 	var y = readingTitles.firstChild;
 
+	console.log(xLen + y);
 	var titles = "";
 	for(let i = 0; i < xlen; i++)
 	{
@@ -151,7 +119,44 @@ function loadAccordion(){
 		});
 	}	
 }
-	// Parse, beginning from the first reading, each of them into their divs
+
+/**
+ 
+	Fill the readingsDisplay div after the user clicks on the readings in the menu.
+	
+*/
+function displayReadings(){
+	console.log("Loading the XML into the website...");				
+
+    let notebook = dataContainer;
+	let readings = notebook.getElementsByTagName("readings");
+	let secondaryDisplay = document.getElementsByClassName('secondaryDisplay')[0];
+	let readingsDisplay = document.createElement('div');
+
+	readingsDisplay.classList.add('readingsDisplay');
+	secondaryDisplay.append(readingsDisplay);
+	console.log("Number of readings found: " + readings[0].childNodes.length);
+
+	// Create a new div element for each reading.
+	for(let i = 0; i < readings.length; i++){
+		// If there are reading notes for a given week
+		if(readings[i].hasChildNodes()){
+			// loop through each each class's one or two readings
+			let children = readings[i].childNodes;
+			console.log("reading #" + i);
+
+			for(let j = 0; j < children.length; j++){
+				if(children[j].nodeName === "firstReading" || children[j].nodeName === "secondReading")
+				{
+					console.log("...reading # " + j + "...of reading # " + i);
+					readingsDisplay.append(children[j]);
+				}
+			}
+		}
+	}
+}
+
+// Parse, beginning from the first reading, each of them into their divs
 
 /* 	for(let i = 0; i < readings.length; i++)
 	{

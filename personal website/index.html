@@ -5,20 +5,26 @@
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>Cart 211 - Personal Website - Concordia University</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="./js/libraries/jquery-3.4.1.min.js"></script>
     <script src="js/preloads.js"></script>
     <script src="js/loadReadings.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="js/libraries/webGL.js"></script>
     <script src="js/libraries/three.js"></script>
     <script src="js/three_display.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Ubuntu+Mono&display=swap" rel="stylesheet">
 
 </head>
-<body onload="createConnection(); chargeImages(); chargeTitles(); createSceneTest();">
+<body onload="$(document).ready(function() { createConnection(); chargeImages(); chargeTitles(); createSceneTest();} );">
+    <div class="anonComments">
+        <div class="headerTitle">"Minimalism ain't a crime." - Anon 1</div>
+        <div class="headerTitle">"I like this website very much." - Anon 2</div>
+        <div class="headerTitle">"I looooooooooooooove it." - Anon 3</div>
+    </div>
     <header id="bannerIcon"><img src="./images/avatar2.png" alt="avatar" style="float:left;"></header>
+    <hr>
     <div class="content-flex-container">
         <div class="first-flex-container">
-            <div id="readings" onclick="loadTableOfReadings(); displayReadings();">Readings</div>
+            <div id="readings" onclick="$(document).ready(function() { loadTableOfReadings(); loadAccordion();} );">Readings</div>
             <div id="projects" onclick="#">Projects</div>
             <div id="portfolio" onclick="#">Portfolio</div>
             <div id="roadmap" onclick="#">Roadmap</div>
