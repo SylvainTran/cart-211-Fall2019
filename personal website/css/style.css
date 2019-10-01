@@ -72,9 +72,24 @@ html{
 	color: red;
 }
 
+/*
+	Changes font of the repeated names above the banner.
+
+*/
+.repeatedName {
+	font-family: 'Ubuntu Mono', monospace;
+}
+
+/*
+	Centers the header's title and changes its font.
+
+*/
 .headerTitle{
 	text-align: center;
 	font-family: 'Ubuntu Mono', monospace;
+	background-color: black;
+	color: white;
+
 }
 
 header{
@@ -84,11 +99,15 @@ header{
 	height: 150px;
 	align-items: flex-start;
 	flex-wrap: wrap;
+	color: blue;
+	font-size: 1.2em;
+	font-style: italic;
 }
 
 main{	
 	display: flex;
 	justify-content: center;
+	flex-flow: row;
 	margin-left: 15%;
 	margin-top: 0;
 	height: 1440px;

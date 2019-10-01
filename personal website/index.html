@@ -12,28 +12,37 @@
     <script src="js/libraries/three.js"></script>
     <script src="js/three_display.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Ubuntu+Mono&display=swap" rel="stylesheet">
-
 </head>
-<body onload="$(document).ready(function() { createConnection(); chargeImages(); chargeTitles(); createSceneTest();} );">
+<body onload="$(document).ready(function() { createConnection(); chargeImages(); } );">
+    <!-- This repetition is intended and has meaning somewhere -->
+    <div class="repeatedStatements">
+        <h1>>This is a serious website.</h1>
+        <h1>>This is a serious website.</h1>
+        <h1>>This is a serious website.</h1>
+        <h1>>This is a serious website.</h1>
+        <h1>>This is a serious website.</h1>
+        <h1>>This is a serious website.</h1>
+        <h1>>This is a serious website.</h1>
+    </div>
+    <header id="bannerIcon"><img src="./images/avatar2.png" alt="avatar" style="float:left;"></header>
+    <div>console log > <span style="font-size: 48px; color: red;">_welcome, anon439.</span></div>
+    <div>> loading path: c:/users/banana_lord/cart211/online-scrap-booking</div>
     <div class="anonComments">
         <div class="headerTitle">"Minimalism ain't a crime." - Anon 1</div>
         <div class="headerTitle">"I like this website very much." - Anon 2</div>
         <div class="headerTitle">"I looooooooooooooove it." - Anon 3</div>
     </div>
-    <header id="bannerIcon"><img src="./images/avatar2.png" alt="avatar" style="float:left;"></header>
     <hr>
     <div class="content-flex-container">
         <div class="first-flex-container">
-            <div id="readings" onclick="$(document).ready(function() { loadTableOfReadings(); loadAccordion();} );">Readings</div>
-            <div id="projects" onclick="#">Projects</div>
-            <div id="portfolio" onclick="#">Portfolio</div>
-            <div id="roadmap" onclick="#">Roadmap</div>
-            <div id="apps" onclick="#">Apps</div>
+            <div id="readings" onclick="$(document).ready(function() { loadTableOfReadings(); loadAccordion();} );">>Readings</div>
+            <div id="projects" onclick="$(document).ready(function() { displayProjects();} );">>Projects</div>
+            <div id="blog" onclick="$(document).ready(function() { displayBlog();} );">>Blog</div>
+            <div id="art" onclick="$(document).ready(function() { displayArt();} );">>Art</div>
+            <div id="UX/UI" onclick="$(document).ready(function() { displayUxUi();} );">>UX/UI</div>
         </div>
         <main class="mainDisplay">
         </main>
-        <!--<div id="threejsDisplay"></div>  
-        <div id="warningBox"></div>          <!-->   
     </div>
     <!--<footer id="foot">
     	<h1>Statut</h1>

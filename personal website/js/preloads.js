@@ -33,7 +33,3 @@ function chargeImages(){
 	//im5.innerHTML += "<br><br><img src=\"images/toilet-paper.png\" alt=\"bunny\" height=\"30px\" width=\"30px\">";
 	//im6.innerHTML += "<img src=\"./images/avatar2.png\" alt=\"avatar\" height=\"100px\" max-width=\"100%\" style=\"float:left;\">";
 }
-function chargeTitles(){
-	tit1 = document.getElementById('bannerIcon');
-	tit1.innerHTML += "&nbsp;" + "<h1>Sylvain Tran </h1>";	
-}

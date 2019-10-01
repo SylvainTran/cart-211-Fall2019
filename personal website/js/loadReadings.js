@@ -1,5 +1,6 @@
 // the readings' data from the XML file
 let dataContainer;
+
 console.log("Creating... a connection...");
 
 function createConnection(){
@@ -19,7 +20,7 @@ function createConnection(){
 				alert('Error loading the xml file.'); 
 			},
 			success: function(data){
-				console.log("Successfully fetched the XML file.");				
+				console.log("Successfully fetched the readings' XML file.");				
 				dataContainer = data;
 			}
 		}
@@ -28,10 +29,27 @@ function createConnection(){
 
 /**
  
+	Clears the page's current display.
+	
+*/
+function clearCurrentContent(){
+	let currentContent = document.getElementsByClassName('treeDisplay')[0];
+	$('.treeDisplay, .projectsDisplay, .artDisplay').each
+	(
+		function(i, obj)
+		{
+			this.remove();
+		}
+	)
+}
+
+/**
+ 
 	Displays accordion for the table of readings.
 	
 */
 function loadTableOfReadings(){
+	clearCurrentContent();
 	console.log("Loading table of readings");
 	//Tree view
 	let treeParent = document.createElement('div');
@@ -43,15 +61,21 @@ function loadTableOfReadings(){
 	fieldsetTree.setAttribute("id", "fieldsetTreeView"); // TODO change to class if intends to re-use
 	let tree = "<ul id=\"readingsTreeView\">" +
 				    "<li><span class=\"caret\">First Class</span>" +
-			   		"<ul class=\"nested\">" + //beginning of nested ul
-						"<li>Roy Rosenzweig, Writing the History of the Internet</li>" +
-						"<li>Daniel Joseph, The Time Canada Wanted Its Own Internet Because" +
-						"It Thought the US Would Mess It Up" + 
-						"</li>" + 
-						"<li><span class=\"caret\">Fred Turner, From Counterculture to Cyberculture</span>" +
-						"<li>Rachel Greene, Web Work: A History of Internet Art</li>" +
-						"<li>Carolina Miranda, The New World of Net Art</li>" + 
+						"<ul class=\"nested\">" + //beginning of nested ul
+							"<li>Roy Rosenzweig, Writing the History of the Internet</li>" +
 						"</ul>" +
+					"<li><span class=\"caret\">Second Class</span>" +
+						"<ul class=\"nested\">" +
+							"<li>Daniel Joseph, The Time Canada Wanted Its Own Internet Because" +
+							"It Thought the US Would Mess It Up" + 
+							"</li>" + 
+							"<li>Fred Turner, From Counterculture to Cyberculture</span></li>" +
+						"</ul>" +
+					"<li><span class=\"caret\">Third Class</span>" +
+						"<ul class=\"nested\">" +
+						"<li>Rachel Greene, Web Work: A History of Internet Art</li>" +
+						"<li>Carolina Miranda, The New World of Net Art</li>" +
+					"</ul>" +
 				"</ul>";//end of nested ul
 	fieldsetTree.innerHTML = tree;
 	treeParent.appendChild(fieldsetTree);
@@ -60,6 +84,7 @@ function loadTableOfReadings(){
 function loadAccordion(){
 	let treeParent = document.getElementsByClassName('treeDisplay')[0];
 	//Insertion of xml-parsed lore database
+	console.log("Loading the XML into the website...");	
 	let mainDisplay = document.getElementById("MainDisplay");
 	let xLen = dataContainer.firstChild.childNodes.length; // 11 in total, but we only need the elements that contain the readings
 	let iterator = dataContainer.firstChild.firstChild; // Placed at the 3rd level, <readings>
@@ -80,7 +105,7 @@ function loadAccordion(){
 				readingTexts[i] = iterator.textContent;
 			}
 		}
-		console.log(readingTexts[i]);
+		//console.log("Reading # : " + i + " " + readingTexts[i]);
 		if(iterator.nodeName != "readings") titles += ", "; // if it's no longer a reading element, add a comma to the titles
 		iterator = iterator.nextSibling;
 	}
@@ -143,7 +168,6 @@ function loadAccordion(){
 			}
 		});
 	}	
-
 }
 
 /**
@@ -180,6 +204,75 @@ function displayReadings(){
 			}
 		}
 	}
+}
+
+
+/**
+ 
+	Display projects' page.	
+
+*/
+function displayProjects(){
+	clearCurrentContent();
+
+	// Display some projects
+	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
+	let projectsDisplay = document.createElement('div');
+	projectsDisplay.classList.add("projectsDisplay");
+
+	let titles = "<h2>Projects in mind...</h2>";
+	let pBody = "<p>TLDR; Become a legend</p>";
+	let pList = "<ol>" +
+				"<li> Grow as an immoral person" + 
+				"<li> Develop my brain" +
+				"<li> Become moral (only as an artist)" +
+				"<li> Computer science: web and mobile apps" +
+				"<li> Indie, edgy video games" +
+				"<li> .NET art websites and Javascript WebGL frameworks" +
+				"<li>Optionally, to get a job" +
+				"</ol>";
+	projectsDisplay.innerHTML = titles + pBody + pList;	
+	mainDisplay.append(projectsDisplay);
+}
+
+
+/**
+ 
+	Display blog page.	
+
+*/
+function displayBlog(){
+	clearCurrentContent();
+
+}
+
+/**
+ 
+	Display art page.	
+
+*/
+function displayArt(){
+	clearCurrentContent();
+	// Display some projects
+	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
+	let artDisplay = document.createElement('div');
+	artDisplay.classList.add("artDisplay");
+
+	let titles = "<h2>Art</h2>";
+	let pBody = "<img src=\"./images/sheep.png\" style = \"width:300px; height: 300px;\"\"> + <img src=\"./images/singleSheep.png\" style = \"width:600px;height:600px;\">";
+	artDisplay.innerHTML = titles + pBody;	
+	mainDisplay.append(artDisplay);
+
+}
+
+/**
+ 
+	Display UxUi page.	
+
+*/
+function displayUxUi(){
+	clearCurrentContent();
+
 }
 
 // Parse, beginning from the first reading, each of them into their divs
