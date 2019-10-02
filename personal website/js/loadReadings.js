@@ -12,7 +12,7 @@ function createConnection(){
 
 	$.ajax(
 		{
-			url: '../readings.xml',
+			url: 'data/readings.xml',
 			type: 'GET',
 			dataType: 'xml',
 			timeout: 1000,
