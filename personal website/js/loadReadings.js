@@ -34,7 +34,7 @@ function createConnection(){
 */
 function clearCurrentContent(){
 	let currentContent = document.getElementsByClassName('treeDisplay')[0];
-	$('.treeDisplay, .projectsDisplay, .artDisplay').each
+	$('.treeDisplay, .projectsDisplay, .blogDisplay, .artDisplay, .uxUiDisplay').each
 	(
 		function(i, obj)
 		{
@@ -62,19 +62,19 @@ function loadTableOfReadings(){
 	let tree = "<ul id=\"readingsTreeView\">" +
 				    "<li><span class=\"caret\">First Class</span>" +
 						"<ul class=\"nested\">" + //beginning of nested ul
-							"<a href=\"#FIRSTCLASS\"><li>Roy Rosenzweig, Writing the History of the Internet</li></a>" +
+							"<a href=\"#FIRST_READING\"><li>Roy Rosenzweig, Writing the History of the Internet</li></a>" +
 						"</ul></a>" +
 					"<li><span class=\"caret\">Second Class</span>" +
 						"<ul class=\"nested\">" +
-							"<a href=\"#SECONDCLASS\"><li>Daniel Joseph, The Time Canada Wanted Its Own Internet Because" +
+							"<a href=\"#SECOND_READING\"><li>Daniel Joseph, The Time Canada Wanted Its Own Internet Because" +
 							"It Thought the US Would Mess It Up" +
 							"</li></a>" +
-							"<a href=\"#THIRDCLASS\"><li>Fred Turner, From Counterculture to Cyberculture</span></li></a>" +
+							"<a href=\"#THIRD_READING\"><li>Fred Turner, From Counterculture to Cyberculture</span></li></a>" +
 						"</ul>" +
 					"<li><span class=\"caret\">Third Class</span>" +
 						"<ul class=\"nested\">" +
-							"<a href=\"#FOURTHCLASS\"><li>Rachel Greene, Web Work: A History of Internet Art</li></a>" +
-							"<a href=\"#FIFTHCLASS\"><li>Carolina Miranda, The New World of Net Art</li></a>" +
+							"<a href=\"#FOURTH_READING\"><li>Rachel Greene, Web Work: A History of Internet Art</li></a>" +
+							"<a href=\"#FIFTH_READING\"><li>Carolina Miranda, The New World of Net Art</li></a>" +
 					"</ul>" +
 				"</ul>";//end of nested ul
 	fieldsetTree.innerHTML = tree;
@@ -89,22 +89,22 @@ function loadAccordion(){
 	let readingTexts = []; // Contains the actual text
 
 	// Would put in a loop to iterate over the DOM elements... but... this seemed easier to read for this exercise
-	readingTexts[0] = dataContainer.firstChild.firstChild.firstChild.firstChild.nodeValue;
+	readingTexts[0] = dataContainer.firstChild.firstChild.firstChild.nodeValue;
 	console.log("First reading" + readingTexts[0]);
 
-	readingTexts[1] = dataContainer.firstChild.firstChild.nextElementSibling.firstChild.firstChild.nodeValue;
+	readingTexts[1] = dataContainer.firstChild.firstChild.nextElementSibling.firstChild.nodeValue;
 	console.log("Second reading: " + readingTexts[1]);
 
-	readingTexts[2] = dataContainer.firstChild.firstChild.nextElementSibling.firstChild.nextElementSibling.firstChild.nodeValue;
+	readingTexts[2] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.firstChild.nodeValue;
 	console.log("Third reading: " + readingTexts[2]);
 
-	readingTexts[3] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.firstChild.firstChild.nodeValue;
+	readingTexts[3] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
 	console.log("Fourth reading: " + readingTexts[3]);
 
-	readingTexts[4] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.firstChild.nextElementSibling.firstChild.nodeValue;
+	readingTexts[4] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
 	console.log("Fifth reading: " + readingTexts[4]);
 
-	// Start at the firstClass node
+	// Start at the beginning of the xml document
 	let iterator = dataContainer.firstChild.firstChild;
 	let xmlDocLength = dataContainer.firstChild.childNodes.length;
 
@@ -122,7 +122,7 @@ function loadAccordion(){
 	console.log("titles: " + titles);
 
 	// Parse the titles string
-	let tokenTitles = titles.split(",");
+	let tokenTitles = titles.split(", ");
 	tokenTitles.pop(); // Remove the last stray ','
 	let titleElements = [];
 
@@ -290,6 +290,13 @@ function displayProjects(){
 function displayBlog(){
 	clearCurrentContent();
 
+	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
+	let blogDisplay = document.createElement('div');
+	blogDisplay.classList.add("blogDisplay");
+
+	blogDisplay.innerHTML = "I am not a blogger.";
+	mainDisplay.append(blogDisplay);
+
 }
 
 /**
@@ -319,6 +326,12 @@ function displayArt(){
 function displayUxUi(){
 	clearCurrentContent();
 
+	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
+	let uxUiDisplay = document.createElement('div');
+	uxUiDisplay.classList.add("uxUiDisplay");
+
+	uxUiDisplay.innerHTML = "I am not a designer. Yet.";
+	mainDisplay.append(uxUiDisplay);
 }
 
 // Parse, beginning from the first reading, each of them into their divs
