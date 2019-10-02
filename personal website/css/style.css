@@ -104,7 +104,7 @@ header{
 	font-style: italic;
 }
 
-main{	
+main{
 	display: flex;
 	justify-content: center;
 	flex-flow: row;
@@ -156,13 +156,8 @@ footer{
 	display: flex;
 	width: 100%;
 }
-#threejsDisplay{ 
+#threejsDisplay{
 	display: flex;
 	justify-content: flex-start;
 	border: none;
-}
-
-.accordion, .panel{
-	margin-top: 50px;
-	width: 75%;
 }

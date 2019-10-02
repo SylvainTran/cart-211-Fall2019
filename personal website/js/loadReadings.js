@@ -17,10 +17,10 @@ function createConnection(){
 			dataType: 'xml',
 			timeout: 1000,
 			error: function(){
-				alert('Error loading the xml file.'); 
+				alert('Error loading the xml file.');
 			},
 			success: function(data){
-				console.log("Successfully fetched the readings' XML file.");				
+				console.log("Successfully fetched the readings' XML file.");
 				dataContainer = data;
 			}
 		}
@@ -28,9 +28,9 @@ function createConnection(){
 }
 
 /**
- 
+
 	Clears the page's current display.
-	
+
 */
 function clearCurrentContent(){
 	let currentContent = document.getElementsByClassName('treeDisplay')[0];
@@ -44,9 +44,9 @@ function clearCurrentContent(){
 }
 
 /**
- 
+
 	Displays accordion for the table of readings.
-	
+
 */
 function loadTableOfReadings(){
 	clearCurrentContent();
@@ -62,19 +62,19 @@ function loadTableOfReadings(){
 	let tree = "<ul id=\"readingsTreeView\">" +
 				    "<li><span class=\"caret\">First Class</span>" +
 						"<ul class=\"nested\">" + //beginning of nested ul
-							"<li>Roy Rosenzweig, Writing the History of the Internet</li>" +
-						"</ul>" +
+							"<a href=\"#FIRSTCLASS\"><li>Roy Rosenzweig, Writing the History of the Internet</li></a>" +
+						"</ul></a>" +
 					"<li><span class=\"caret\">Second Class</span>" +
 						"<ul class=\"nested\">" +
-							"<li>Daniel Joseph, The Time Canada Wanted Its Own Internet Because" +
-							"It Thought the US Would Mess It Up" + 
-							"</li>" + 
-							"<li>Fred Turner, From Counterculture to Cyberculture</span></li>" +
+							"<a href=\"#SECONDCLASS\"><li>Daniel Joseph, The Time Canada Wanted Its Own Internet Because" +
+							"It Thought the US Would Mess It Up" +
+							"</li></a>" +
+							"<a href=\"#THIRDCLASS\"><li>Fred Turner, From Counterculture to Cyberculture</span></li></a>" +
 						"</ul>" +
 					"<li><span class=\"caret\">Third Class</span>" +
 						"<ul class=\"nested\">" +
-						"<li>Rachel Greene, Web Work: A History of Internet Art</li>" +
-						"<li>Carolina Miranda, The New World of Net Art</li>" +
+							"<a href=\"#FOURTHCLASS\"><li>Rachel Greene, Web Work: A History of Internet Art</li></a>" +
+							"<a href=\"#FIFTHCLASS\"><li>Carolina Miranda, The New World of Net Art</li></a>" +
 					"</ul>" +
 				"</ul>";//end of nested ul
 	fieldsetTree.innerHTML = tree;
@@ -83,100 +83,146 @@ function loadTableOfReadings(){
 
 function loadAccordion(){
 	let treeParent = document.getElementsByClassName('treeDisplay')[0];
-	//Insertion of xml-parsed lore database
-	console.log("Loading the XML into the website...");	
+	console.log("Loading the XML into the website...");
 	let mainDisplay = document.getElementById("MainDisplay");
-	let xLen = dataContainer.firstChild.childNodes.length; // 11 in total, but we only need the elements that contain the readings
-	let iterator = dataContainer.firstChild.firstChild; // Placed at the 3rd level, <readings>
-	console.log(xLen + " elements found. Iterating...");
-
 	let titles = ""; // Contains the date of the classes (cart 211)
 	let readingTexts = []; // Contains the actual text
 
-	for(let i = 0; i < xLen; i++)
+	// Would put in a loop to iterate over the DOM elements... but... this seemed easier to read for this exercise
+	readingTexts[0] = dataContainer.firstChild.firstChild.firstChild.firstChild.nodeValue;
+	console.log("First reading" + readingTexts[0]);
+
+	readingTexts[1] = dataContainer.firstChild.firstChild.nextElementSibling.firstChild.firstChild.nodeValue;
+	console.log("Second reading: " + readingTexts[1]);
+
+	readingTexts[2] = dataContainer.firstChild.firstChild.nextElementSibling.firstChild.nextElementSibling.firstChild.nodeValue;
+	console.log("Third reading: " + readingTexts[2]);
+
+	readingTexts[3] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.firstChild.firstChild.nodeValue;
+	console.log("Fourth reading: " + readingTexts[3]);
+
+	readingTexts[4] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.firstChild.nextElementSibling.firstChild.nodeValue;
+	console.log("Fifth reading: " + readingTexts[4]);
+
+	// Start at the firstClass node
+	let iterator = dataContainer.firstChild.firstChild;
+	let xmlDocLength = dataContainer.firstChild.childNodes.length;
+
+	for(let i = 0; i < xmlDocLength; i++)
 	{
-		if(iterator.nodeType === 1) // If it is an element tag
+		if(iterator.nodeType === 1) // If it	 is an element tag and not some stray line jump
 		{
-			// Add it to the title array in uppercase format
 			titles += iterator.nodeName.toUpperCase();
-			// if there is a reading for that class
-			if(iterator.nodeName === "firstReading" || "secondReading")
-			{
-				readingTexts[i] = iterator.textContent;
-			}
+			// Add it to the title array in uppercase format
+			titles += ", "; // Add a comma to the title to parse it into an array later
+			iterator = iterator.nextSibling; // Go to the next sibling
 		}
-		//console.log("Reading # : " + i + " " + readingTexts[i]);
-		if(iterator.nodeName != "readings") titles += ", "; // if it's no longer a reading element, add a comma to the titles
-		iterator = iterator.nextSibling;
 	}
 
 	console.log("titles: " + titles);
 
 	// Parse the titles string
 	let tokenTitles = titles.split(",");
-	var titlesArray = [];
+	tokenTitles.pop(); // Remove the last stray ','
+	let titleElements = [];
 
 	// Create the h2 titles
 	for(let i = 0; i < tokenTitles.length; i++)
 	{
-		titlesArray[i] = document.createElement("H2");
-		//set an id attribute for event handling
-		titlesArray[i].setAttribute("id", tokenTitles[i]);
-		//titlesArray[i].setAttribute("onclick", "UnfoldChildren(this, readingTitles, xLen);");
-		let textBlock = document.createTextNode(tokenTitles[i]);		
-		titlesArray[i].appendChild(textBlock);
-		console.log(titlesArray[i].firstChild);
-	}	
+		titleElements[i] = document.createElement("H2");
+		titleElements[i].setAttribute("id", tokenTitles[i]);
+		let textBlock = document.createTextNode(tokenTitles[i]);
+		titleElements[i].appendChild(textBlock);
+		console.log(titleElements[i].firstChild);
+	}
 
-	// Append the accordions below the tree display, for each DOM element in the titlesArray
-	for(const title of titlesArray)
+	// Append the accordions below the tree display, for each DOM element in the titleElements
+	for(const title of titleElements)
 	{
-		let accordionBt = document.createElement("BUTTON");
-		accordionBt.setAttribute("class", "accordion");
+		let button = document.createElement("BUTTON");
+		button.setAttribute("id", title.id);
+		button.setAttribute("onclick", "UnfoldText(this.id)");
+
 		let panel = document.createElement("PANEL");
-		panel.setAttribute("class", "panel");
-		//console.log(titlesArray[i].;
-		accordionBt.append(title);	
-		treeParent.appendChild(accordionBt);
+		panel.setAttribute("id", title.id);
+		button.append(title);
+		treeParent.appendChild(button);
 		treeParent.appendChild(panel);
-	}	
+	}
 
 	let j = 0;
 	// Fill texts in accordion
 	for(let i = 0; i < readingTexts.length; i++)
 	{
 		// Get all the panel by class date (first class etc.)
-		let panels = document.getElementsByClassName('panel');
-		panels[j++].append(readingTexts[i]);			
+		let panels = document.getElementsByTagName('panel');
+		panels[j++].append(readingTexts[i]);
 	}
 
-	let acc = document.getElementsByClassName("accordion");
-	let i;
+	// Hides the panels on launch and adds CSS class to them and their buttons
+	styleButtonsAndPanels();
+}
 
-	for(i = 0; i < acc.length; i++)
+function UnfoldText(clickedId){
+	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
+	let panels = mainDisplay.getElementsByTagName('panel');
+	console.log("Unfolding this accordion");
+
+	// Get the id of which H2 title was clicked.
+	// By this id, hide the panel corresponding to this id
+
+	for(panel of panels)
 	{
-		acc[i].addEventListener("click", function(){
-			this.classList.toggle("active");
-			let panelAcc = this.nextElementSibling;;
-			if(panelAcc.style.maxHeight)
+		if(panel.id === clickedId)
+		{
+			if(panel.style.display === "none") // it's hidden already
 			{
-				panelAcc.style.maxHeight = null;
+				panel.style.display = "flex";
 			}
-			else
+			else // it's unfolded already
 			{
-				panelAcc.style.maxHeight = panelAcc.scrollHeight + "50px";
+				panel.style.display = "none";
 			}
-		});
-	}	
+		}
+	}
+}
+
+function styleButtonsAndPanels(){
+
+	let buttons = document.getElementsByTagName('button');
+	let panels = document.getElementsByTagName('panel');
+
+	for(panel of panels)
+	{
+		panel.style = "display: none;" +
+									"margin-top: 50px;" +
+									"width: 75%;" +
+									"font-size: 21px;" +
+									"font-family: 'VT323', monospace;" +
+									"color: white;" +
+									"background-color: black;";
+	}
+
+	for(button of buttons)
+	{
+		button.style = "margin-top: 50px;" +
+									 "width: 75%;" +
+									 "border-radius: 4px;" +
+									 "border: none;" +
+									 "cursor: pointer;" +
+									 "color: white;" +
+									 "background-color: blue;";
+	}
+
 }
 
 /**
- 
+
 	Fill the readingsDisplay div after the user clicks on the readings in the menu.
-	
+
 */
 function displayReadings(){
-	console.log("Loading the XML into the website...");				
+	console.log("Loading the XML into the website...");
 
     let notebook = dataContainer;
 	let readings = notebook.getElementsByTagName("readings");
@@ -208,8 +254,8 @@ function displayReadings(){
 
 
 /**
- 
-	Display projects' page.	
+
+	Display projects' page.
 
 */
 function displayProjects(){
@@ -223,7 +269,7 @@ function displayProjects(){
 	let titles = "<h2>Projects in mind...</h2>";
 	let pBody = "<p>TLDR; Become a legend</p>";
 	let pList = "<ol>" +
-				"<li> Grow as an immoral person" + 
+				"<li> Grow as an immoral person" +
 				"<li> Develop my brain" +
 				"<li> Become moral (only as an artist)" +
 				"<li> Computer science: web and mobile apps" +
@@ -231,14 +277,14 @@ function displayProjects(){
 				"<li> .NET art websites and Javascript WebGL frameworks" +
 				"<li>Optionally, to get a job" +
 				"</ol>";
-	projectsDisplay.innerHTML = titles + pBody + pList;	
+	projectsDisplay.innerHTML = titles + pBody + pList;
 	mainDisplay.append(projectsDisplay);
 }
 
 
 /**
- 
-	Display blog page.	
+
+	Display blog page.
 
 */
 function displayBlog(){
@@ -247,8 +293,8 @@ function displayBlog(){
 }
 
 /**
- 
-	Display art page.	
+
+	Display art page.
 
 */
 function displayArt(){
@@ -260,14 +306,14 @@ function displayArt(){
 
 	let titles = "<h2>Art</h2>";
 	let pBody = "<img src=\"./images/sheep.png\" style = \"width:300px; height: 300px;\"\"> + <img src=\"./images/singleSheep.png\" style = \"width:600px;height:600px;\">";
-	artDisplay.innerHTML = titles + pBody;	
+	artDisplay.innerHTML = titles + pBody;
 	mainDisplay.append(artDisplay);
 
 }
 
 /**
- 
-	Display UxUi page.	
+
+	Display UxUi page.
 
 */
 function displayUxUi(){
@@ -283,13 +329,13 @@ function displayUxUi(){
 		let imgSrc = readings[i].childNodes[5].childNodes[0].textContent; //<img><src> x </src></img>
 		let imgAlt = readings[i].childNodes[4].textContent;
         let imgId = readings[i].childNodes[5].childNodes[1].textContent;
-        		
+
 		imgProd.setAttribute("src", imgSrc);
 		imgProd.setAttribute("height", "350px");
 		imgProd.setAttribute("width", "275px");
-		imgProd.setAttribute("alt", imgAlt);		
+		imgProd.setAttribute("alt", imgAlt);
         imgProd.setAttribute("id", imgId);
-        
+
 		arrayProd.rows[0].cells[i].appendChild(imgProd); //image
 		arrayProd.rows[1].cells[i].innerHTML = x[i].childNodes[0].textContent;
 		arrayProd.rows[2].cells[i].innerHTML = x[i].childNodes[1].textContent;
