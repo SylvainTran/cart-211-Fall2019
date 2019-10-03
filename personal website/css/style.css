@@ -8,6 +8,46 @@ html{
 }
 
 /*
+	Changes font of the repeated names above the banner.
+
+*/
+.repeatedStatements {
+	font-family: 'VT323', monospace;
+}
+
+/*
+	Makes the div a flexbox at the start of its horizontal axis.
+	Font-size increase and custom font for the fake console greeting below
+	the banner.
+
+*/
+.fakeConsoleGreeting {
+	display: flex;
+	align-items: flex-start;
+	font-size: 50px;
+	font-family: 'VT323', monospace;
+}
+/*
+	Makes the div for the anonComments flexboxed, centered and
+	flowing in a column. 
+
+*/
+.anonComments {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+/*
+	Some interactivity with the anon comments in the banner section.
+	Zooms and colors the text red on hover.
+
+*/
+.anonComments div:hover {
+	font-size: 150px;
+	color: red;
+}
+
+/*
 	Main (global) flexbox container.
 
 */
@@ -20,7 +60,8 @@ html{
 }
 
 /*
-	Divs in the main container. Menu items are stacked in a column on the left of the page.
+	Targets divs that are descendants of the main container. Menu items are 
+	stacked in a column on the left of the page.
 	Div items are aligned at the start of the flexbox.
 	The main display is also influenced here.
 
@@ -35,7 +76,8 @@ html{
 }
 
 /*
-	Navigation menu on the left.
+	Navigation menu on the left. Cursor icon change and subtle transform
+	transitions.
 
 */
 .first-flex-container {
@@ -58,35 +100,18 @@ html{
 	height: 100px;
 }
 
+/*
+	Changes the text color of a menu item that is clicked to green
+	yellow.
+
+*/
 .first-flex-container div:active {
 	color: greenyellow;
 }
 
 /*
-	Some interactivity with the anon comments in the banner section.
-	Zooms and colors red on hover.
-
-*/
-.anonComments div:hover {
-	font-size: 150px;
-	color: red;
-}
-
-/*
-	Changes font of the repeated names above the banner.
-
-*/
-.repeatedStatements {
-	font-family: 'VT323', monospace;
-}
-
-.fakeConsoleGreeting {
-	font-size: 50px;
-	font-family: 'VT323', monospace;
-}
-
-/*
 	Centers the header's title and changes its font.
+	Also turns the background black and the text white.
 
 */
 .headerTitle{
@@ -97,6 +122,12 @@ html{
 
 }
 
+/*
+	Changes the header section to a custom font,
+	puts the height to 150px, colors text blue, and makes the
+	container a flexbox justified at the end but aligned at the start.
+
+*/
 header{
 	font-family: 'Bad Script', cursive;
 	display: flex;
@@ -105,10 +136,17 @@ header{
 	align-items: flex-start;
 	flex-wrap: wrap;
 	color: blue;
-	font-size: 1.2em;
+	font-size: 24px;
 	font-style: italic;
 }
 
+/*
+	Changes the main display to a height of 1440px,
+	to take the full width (100%) of the page, and to have
+	a flex-flow of type row and centered. Margin of 15% on the left and 0
+	on the top also.
+
+*/
 main{
 	display: flex;
 	justify-content: center;
@@ -118,19 +156,13 @@ main{
 	height: 1440px;
 	width: 100%;
 }
-#zoneAffichage {
-	display: flex;
-	justify-content: flex-start;
-}
 
-footer{
-	display: inline-block;
-	margin-bottom: 0px;
-	width: 100%;
-	text-align: center;
-	font-family: 'Bad Script', cursive;
-}
+/*
+	Styles the injected reading's display to make it a flex container,
+	to take full page width, and to display as flex at the start.
+	Puts a border as well.
 
+*/
 .readingsDisplay{
 	display: flex;
 	justify-content: flex-start;
@@ -138,16 +170,29 @@ footer{
 	border: 2px solid black;
 }
 
-#readingsTreeView {
-	font-size: 15px;
-	width: 500px;
+/*
+	Modifies the field set so that it is 50% width.
+
+*/
+#fieldsetTreeView{
+	width: 50%;
 }
 
+/*
+	The table of readings' changes to font-size.
+	Applied to the ul element.
+
+*/
 #readingsTreeView {
 	font-size: 15px;
-	width: 500px;
 }
 
+/*
+	Changes the text color of
+	the nested li inside the table of readings to blue
+	and red on hover. Changes cursor to zoom-in as well on hover.
+
+*/
 .nested li{
 	color: blue;
 }
@@ -155,14 +200,4 @@ footer{
 .nested li:hover{
 	color: red;
 	cursor: zoom-in;
-}
-
-.treeDisplay{
-	display: flex;
-	width: 100%;
-}
-#threejsDisplay{
-	display: flex;
-	justify-content: flex-start;
-	border: none;
 }

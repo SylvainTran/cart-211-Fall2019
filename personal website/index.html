@@ -1,34 +1,40 @@
 ﻿<!DOCTYPE html>
 <html>
+<!-- This project is a single page, responsive and static website which uses Javascript and XML (and later JSON if needed) to inject content dynamically -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
     <title>Cart 211 - Personal Website - Concordia University</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="./js/libraries/jquery-3.4.1.min.js"></script>
-    <script src="js/preloads.js"></script>
-    <script src="js/loadReadings.js"></script>
+    <script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Ubuntu+Mono&display=swap" rel="stylesheet">
 </head>
-<body onload="$(document).ready(function() { createConnection(); chargeImages(); } );">
+<!-- On body load, and when the document is ready, Ajax is used to fetch the xml for content injection, and pictures are loaded -->
+<body onload="$(document).ready(function() { createConnection(); } );">
     <!-- This repetition is intended and has meaning somewhere -->
     <div class="repeatedStatements">
         <h1>>This is a serious website.</h1>
         <h1>>This is a serious website.</h1>
     </div>
-    <header id="bannerIcon"><img src="./images/avatar2.png" alt="avatar" style="float:left;"></header>
+    <!-- Banner icon -->
+    <header id="bannerIcon"><img src="images/avatar2.png" alt="avatar" style="float:left;"></header>
+    <!-- Fake console greeting below the banner -->
     <div class="fakeConsoleGreeting">
       <div>console log > <span style="font-size: 48px; color: red;">_welcome, anon439.</span></div>
       <div> > loading path: c:/users/Sylvain_Tran/cart211/online-scrap-booking</div>
     </div>
+    <!-- Anon comments that have a pseudo-class div:hover, which increases the divs' width property -->
     <div class="anonComments">
         <div class="headerTitle">"Minimalism is not laziness." - Anon 1</div>
         <div class="headerTitle">"I like this website very much." - Anon 2</div>
         <div class="headerTitle">"This website, I really like very much." - Anon 3</div>
     </div>
     <hr>
+    <!-- Start of the main flex container -->
     <div class="content-flex-container">
+        <!-- Menu on the left-hand side, on which there are onclick events that load content into the mainDisplay right below -->
         <div class="first-flex-container">
             <div id="readings" onclick="$(document).ready(function() { loadTableOfReadings(); loadAccordion();} );">>Readings</div>
             <div id="projects" onclick="$(document).ready(function() { displayProjects();} );">>Projects</div>
@@ -36,12 +42,9 @@
             <div id="art" onclick="$(document).ready(function() { displayArt();} );">>Art</div>
             <div id="UX/UI" onclick="$(document).ready(function() { displayUxUi();} );">>UX/UI</div>
         </div>
+        <!-- This static main element contains the display where content is injected and removed -->
         <main class="mainDisplay">
         </main>
     </div>
-    <!--<footer id="foot">
-    	<h1>Statut</h1>
-	    <div id="statut">"Be the change you want to be..."</div>
-    </footer> <!-->
 </body>
 </html>

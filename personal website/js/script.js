@@ -3,6 +3,10 @@ let dataContainer;
 
 console.log("Creating... a connection...");
 
+/*
+	Asynchronously, using ajax and jquery, fetches the xml for the readings page.
+
+*/
 function createConnection(){
 	console.log("Attempting to fetch the XML file...");
 
@@ -29,7 +33,8 @@ function createConnection(){
 
 /**
 
-	Clears the page's current display.
+	Clears the page's current display. Clears all the pages that could have
+	been injected.
 
 */
 function clearCurrentContent(){
@@ -45,18 +50,19 @@ function clearCurrentContent(){
 
 /**
 
-	Displays accordion for the table of readings.
+	Creates and displays the table of readings.
 
 */
 function loadTableOfReadings(){
 	clearCurrentContent();
 	console.log("Loading table of readings");
-	//Tree view
+	// Create a div and parents it to the main display. Adds a class to it.
 	let treeParent = document.createElement('div');
 	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
 	mainDisplay.append(treeParent);
-
 	treeParent.classList.add("treeDisplay");
+	
+	// Create our fieldset and the tree (table of readings) to be displayed inside
 	let fieldsetTree = document.createElement("FIELDSET");
 	fieldsetTree.setAttribute("id", "fieldsetTreeView"); // TODO change to class if intends to re-use
 	let tree = "<ul id=\"readingsTreeView\">" +
@@ -77,10 +83,16 @@ function loadTableOfReadings(){
 							"<a href=\"#FIFTH_READING\"><li>Carolina Miranda, The New World of Net Art</li></a>" +
 					"</ul>" +
 				"</ul>";//end of nested ul
-	fieldsetTree.innerHTML = tree;
-	treeParent.appendChild(fieldsetTree);
+	fieldsetTree.innerHTML = tree; // Injects the tree into the fieldset's innerhtml
+	treeParent.appendChild(fieldsetTree); //appends the div of the tree to the fieldset
 }
 
+
+/**
+
+	Creates and displays and the readings' accordion.
+
+*/
 function loadAccordion(){
 	let treeParent = document.getElementsByClassName('treeDisplay')[0];
 	console.log("Loading the XML into the website...");
@@ -108,9 +120,10 @@ function loadAccordion(){
 	let iterator = dataContainer.firstChild.firstChild;
 	let xmlDocLength = dataContainer.firstChild.childNodes.length;
 
+	// Loop over the titles for the accordions as written in the xml's tags
 	for(let i = 0; i < xmlDocLength; i++)
 	{
-		if(iterator.nodeType === 1) // If it	 is an element tag and not some stray line jump
+		if(iterator.nodeType === 1) // Check if it is an element tag (nodeType === 1) and not some stray line jump
 		{
 			titles += iterator.nodeName.toUpperCase();
 			// Add it to the title array in uppercase format
@@ -121,12 +134,12 @@ function loadAccordion(){
 
 	console.log("titles: " + titles);
 
-	// Parse the titles string
+	// Parse the titles' string using commas as separators
 	let tokenTitles = titles.split(", ");
 	tokenTitles.pop(); // Remove the last stray ','
 	let titleElements = [];
 
-	// Create the h2 titles
+	// Create the h2 titles and appends their textNodes to them
 	for(let i = 0; i < tokenTitles.length; i++)
 	{
 		titleElements[i] = document.createElement("H2");
@@ -139,17 +152,22 @@ function loadAccordion(){
 	// Append the accordions below the tree display, for each DOM element in the titleElements
 	for(const title of titleElements)
 	{
+		// Create the buttons and their attributes (with the onclick event to unfold the accordion)
 		let button = document.createElement("BUTTON");
 		button.setAttribute("id", title.id);
 		button.setAttribute("onclick", "UnfoldText(this.id)");
 
+		// Create the panels and their attributes
 		let panel = document.createElement("PANEL");
 		panel.setAttribute("id", title.id);
+
+		// Append these after the table of readings (treeParent)
 		button.append(title);
 		treeParent.appendChild(button);
 		treeParent.appendChild(panel);
 	}
 
+	// Iterator
 	let j = 0;
 	// Fill texts in accordion
 	for(let i = 0; i < readingTexts.length; i++)
@@ -163,13 +181,14 @@ function loadAccordion(){
 	styleButtonsAndPanels();
 }
 
+/**
+	Hide or unhide the panels containing the readings onclick.
+
+*/
 function UnfoldText(clickedId){
 	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
 	let panels = mainDisplay.getElementsByTagName('panel');
-	console.log("Unfolding this accordion");
-
-	// Get the id of which H2 title was clicked.
-	// By this id, hide the panel corresponding to this id
+	console.log("Unfolding accordion");
 
 	for(panel of panels)
 	{
@@ -187,6 +206,10 @@ function UnfoldText(clickedId){
 	}
 }
 
+/**
+	Styles the buttons and panels, hide them panels at the beginning too.
+
+*/
 function styleButtonsAndPanels(){
 
 	let buttons = document.getElementsByTagName('button');
@@ -218,43 +241,6 @@ function styleButtonsAndPanels(){
 
 /**
 
-	Fill the readingsDisplay div after the user clicks on the readings in the menu.
-
-*/
-function displayReadings(){
-	console.log("Loading the XML into the website...");
-
-    let notebook = dataContainer;
-	let readings = notebook.getElementsByTagName("readings");
-	let secondaryDisplay = document.getElementsByClassName('secondaryDisplay')[0];
-	let readingsDisplay = document.createElement('div');
-
-	readingsDisplay.classList.add('readingsDisplay');
-	secondaryDisplay.append(readingsDisplay);
-	console.log("Number of readings found: " + readings[0].childNodes.length);
-
-	// Create a new div element for each reading.
-	for(let i = 0; i < readings.length; i++){
-		// If there are reading notes for a given week
-		if(readings[i].hasChildNodes()){
-			// loop through each each class's one or two readings
-			let children = readings[i].childNodes;
-			console.log("reading #" + i);
-
-			for(let j = 0; j < children.length; j++){
-				if(children[j].nodeName === "firstReading" || children[j].nodeName === "secondReading")
-				{
-					console.log("...reading # " + j + "...of reading # " + i);
-					readingsDisplay.append(children[j]);
-				}
-			}
-		}
-	}
-}
-
-
-/**
-
 	Display projects' page.
 
 */
@@ -272,10 +258,10 @@ function displayProjects(){
 				"<li> Grow as an immoral person" +
 				"<li> Develop my brain" +
 				"<li> Become moral (only as an artist)" +
-				"<li> Computer science: web and mobile apps" +
-				"<li> Indie, edgy video games" +
-				"<li> .NET art websites and Javascript WebGL frameworks" +
-				"<li>Optionally, to get a job" +
+				"<li> Computer science: Create web and mobile apps" +
+				"<li> Make Christian indie, edgy video games" +
+				"<li> Learn .NET art websites and Javascript WebGL frameworks" +
+				"<li>Optionally get a job" +
 				"</ol>";
 	projectsDisplay.innerHTML = titles + pBody + pList;
 	mainDisplay.append(projectsDisplay);
@@ -333,25 +319,3 @@ function displayUxUi(){
 	uxUiDisplay.innerHTML = "I am not a designer. Yet.";
 	mainDisplay.append(uxUiDisplay);
 }
-
-// Parse, beginning from the first reading, each of them into their divs
-
-/* 	for(let i = 0; i < readings.length; i++)
-	{
-		let imgProd = document.createElement("img");
-		let imgSrc = readings[i].childNodes[5].childNodes[0].textContent; //<img><src> x </src></img>
-		let imgAlt = readings[i].childNodes[4].textContent;
-        let imgId = readings[i].childNodes[5].childNodes[1].textContent;
-
-		imgProd.setAttribute("src", imgSrc);
-		imgProd.setAttribute("height", "350px");
-		imgProd.setAttribute("width", "275px");
-		imgProd.setAttribute("alt", imgAlt);
-        imgProd.setAttribute("id", imgId);
-
-		arrayProd.rows[0].cells[i].appendChild(imgProd); //image
-		arrayProd.rows[1].cells[i].innerHTML = x[i].childNodes[0].textContent;
-		arrayProd.rows[2].cells[i].innerHTML = x[i].childNodes[1].textContent;
-		arrayProd.rows[3].cells[i].innerHTML = x[i].childNodes[2].textContent;
-		arrayProd.rows[4].cells[i].innerHTML = x[i].childNodes[3].textContent;
-	} */
