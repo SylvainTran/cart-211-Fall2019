@@ -61,7 +61,7 @@ function loadTableOfReadings(){
 	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
 	mainDisplay.append(treeParent);
 	treeParent.classList.add("treeDisplay");
-	
+
 	// Create our fieldset and the tree (table of readings) to be displayed inside
 	let fieldsetTree = document.createElement("FIELDSET");
 	fieldsetTree.setAttribute("id", "fieldsetTreeView"); // TODO change to class if intends to re-use
@@ -106,6 +106,28 @@ function loadAccordion(){
 	let readingTexts = []; // Contains the actual text
 
 	// Would put in a loop to iterate over the DOM elements... but... this seemed easier to read for this exercise
+
+	/**
+		Loop through the readings.
+
+	*/
+	// Use an iterator to go through the XML DOM.
+	let iterator = dataContainer.firstChild;
+	// iterator is placed on the first element of the document.
+
+	if(!iterator) {
+		alert("iterator null");
+	}
+	// While the iterator has not reached the end of the XML DOM.
+	while(iterator.firstChild !== dataContainer.lastChild) {
+			alert("Iterating through...");
+			if(iterator.nodeType === "1") {
+				// it's an element node
+				alert(iterator.firstChild.nodeValue);
+			}
+			iterator = iterator.nextSibling;
+	}
+
 	readingTexts[0] = dataContainer.firstChild.firstChild.firstChild.nodeValue;
 	console.log("First reading" + readingTexts[0]);
 
@@ -128,7 +150,7 @@ function loadAccordion(){
 	console.log("Seventh reading: " + readingTexts[6]);
 
 	// Start at the beginning of the xml document
-	let iterator = dataContainer.firstChild.firstChild;
+	let iterator2 = dataContainer.firstChild.firstChild;
 	let xmlDocLength = dataContainer.firstChild.childNodes.length;
 
 	// Loop over the titles for the accordions as written in the xml's tags
@@ -329,4 +351,22 @@ function displayUxUi(){
 
 	uxUiDisplay.innerHTML = "I am not a designer.";
 	mainDisplay.append(uxUiDisplay);
+}
+
+/**
+	Class exercise October 11, 2019. Animating a box using JS.
+
+*/
+let coordinateTop = 0;
+let clock = setInterval(frame, 10);
+
+function frame() {
+	coordinateTop += 3; // each frame, increase the top's value by 2.
+	console.log(coordinateTop);
+	let theButton = document.querySelector('.firstBox');
+	theButton.style.top = coordinateTop + 'px';
+
+	if(coordinateTop >= 500) {
+		clearInterval(clock);
+	}
 }
