@@ -81,7 +81,12 @@ function loadTableOfReadings(){
 						"<ul class=\"nested\">" +
 							"<a href=\"#FOURTH_READING\"><li>Rachel Greene, Web Work: A History of Internet Art</li></a>" +
 							"<a href=\"#FIFTH_READING\"><li>Carolina Miranda, The New World of Net Art</li></a>" +
-					"</ul>" +
+						"</ul>" +
+					"<li><span class=\"caret\">Fifth Class</span>" +
+						"<ul class=\"nested\">" +
+							"<a href=\"#SIXTH_READING\"><li>Richard Stallman: The GNU Manifesto</li></a>" +
+							"<a href=\"#SEVENTH_READING\"><li>Gavin Mueller: Digital Proudhonism</li></a>" +
+						"</ul>" +
 				"</ul>";//end of nested ul
 	fieldsetTree.innerHTML = tree; // Injects the tree into the fieldset's innerhtml
 	treeParent.appendChild(fieldsetTree); //appends the div of the tree to the fieldset
@@ -322,6 +327,6 @@ function displayUxUi(){
 	let uxUiDisplay = document.createElement('div');
 	uxUiDisplay.classList.add("uxUiDisplay");
 
-	uxUiDisplay.innerHTML = "I am not a designer. Yet.";
+	uxUiDisplay.innerHTML = "I am not a designer.";
 	mainDisplay.append(uxUiDisplay);
 }
