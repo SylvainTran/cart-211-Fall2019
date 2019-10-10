@@ -116,6 +116,12 @@ function loadAccordion(){
 	readingTexts[4] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
 	console.log("Fifth reading: " + readingTexts[4]);
 
+	readingTexts[5] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
+	console.log("Sixth reading: " + readingTexts[5]);
+
+	readingTexts[6] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
+	console.log("Seventh reading: " + readingTexts[6]);
+
 	// Start at the beginning of the xml document
 	let iterator = dataContainer.firstChild.firstChild;
 	let xmlDocLength = dataContainer.firstChild.childNodes.length;
