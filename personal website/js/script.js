@@ -87,6 +87,10 @@ function loadTableOfReadings(){
 							"<a href=\"#SIXTH_READING\"><li>Richard Stallman: The GNU Manifesto</li></a>" +
 							"<a href=\"#SEVENTH_READING\"><li>Gavin Mueller: Digital Proudhonism</li></a>" +
 						"</ul>" +
+					"<li><span class=\"caret\">Sixth Class</span>" +
+						"<ul class=\"nested\">" +
+							"<a href=\"#EIGHTH_READING\"><li>Ted Nelson: Computer Libs/Dreams</li></a>" +
+						"</ul>" +
 				"</ul>";//end of nested ul
 	fieldsetTree.innerHTML = tree; // Injects the tree into the fieldset's innerhtml
 	treeParent.appendChild(fieldsetTree); //appends the div of the tree to the fieldset
@@ -110,7 +114,7 @@ function loadAccordion(){
 	/**
 		Loop through the readings.
 
-	*/
+
 	// Use an iterator to go through the XML DOM.
 	let iterator = dataContainer.firstChild;
 	// iterator is placed on the first element of the document.
@@ -127,7 +131,7 @@ function loadAccordion(){
 			}
 			iterator = iterator.nextSibling;
 	}
-
+	*/
 	readingTexts[0] = dataContainer.firstChild.firstChild.firstChild.nodeValue;
 	console.log("First reading" + readingTexts[0]);
 
@@ -150,7 +154,7 @@ function loadAccordion(){
 	console.log("Seventh reading: " + readingTexts[6]);
 
 	readingTexts[7] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
-	console.log("Eight reading: " + readingTexts[7]);
+	console.log("Eighth reading: " + readingTexts[7]);
 
 	// Start at the beginning of the xml document
 	let iterator2 = dataContainer.firstChild.firstChild;
@@ -159,12 +163,12 @@ function loadAccordion(){
 	// Loop over the titles for the accordions as written in the xml's tags
 	for(let i = 0; i < xmlDocLength; i++)
 	{
-		if(iterator.nodeType === 1) // Check if it is an element tag (nodeType === 1) and not some stray line jump
+		if(iterator2.nodeType === 1) // Check if it is an element tag (nodeType === 1) and not some stray line jump
 		{
-			titles += iterator.nodeName.toUpperCase();
+			titles += iterator2.nodeName.toUpperCase();
 			// Add it to the title array in uppercase format
 			titles += ", "; // Add a comma to the title to parse it into an array later
-			iterator = iterator.nextSibling; // Go to the next sibling
+			iterator2 = iterator2.nextSibling; // Go to the next sibling
 		}
 	}
 
@@ -356,20 +360,20 @@ function displayUxUi(){
 	mainDisplay.append(uxUiDisplay);
 }
 
-/**
-	Class exercise October 11, 2019. Animating a box using JS.
-
-*/
-let coordinateTop = 0;
-let clock = setInterval(frame, 10);
+// /**
+// 	Class exercise October 11, 2019. Animating a box using JS.
+//
+// */
+ let coordinateTop = 0;
+ let clock = setInterval(frame, 10);
 
 function frame() {
-	coordinateTop += 3; // each frame, increase the top's value by 2.
-	console.log(coordinateTop);
-	let theButton = document.querySelector('.firstBox');
+ 	coordinateTop += 3; // each frame, increase the top's value by 2.
+ 	console.log(coordinateTop);
+ 	let theButton = document.querySelector('.firstBox');
 	theButton.style.top = coordinateTop + 'px';
 
-	if(coordinateTop >= 500) {
-		clearInterval(clock);
-	}
-}
+ 	if(coordinateTop >= 500) {
+ 		clearInterval(clock);
+ 	}
+ }
