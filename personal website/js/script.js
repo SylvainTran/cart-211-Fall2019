@@ -109,66 +109,38 @@ function loadAccordion(){
 	let titles = ""; // Contains the date of the classes (cart 211)
 	let readingTexts = []; // Contains the actual text
 
-	// Would put in a loop to iterate over the DOM elements... but... this seemed easier to read for this exercise
-
 	/**
 		Loop through the readings.
 
-
+	*/
 	// Use an iterator to go through the XML DOM.
-	let iterator = dataContainer.firstChild;
+	let iterator = dataContainer.firstChild.firstChild;
 	// iterator is placed on the first element of the document.
 
-	if(!iterator) {
-		alert("iterator null");
-	}
 	// While the iterator has not reached the end of the XML DOM.
-	while(iterator.firstChild !== dataContainer.lastChild) {
-			alert("Iterating through...");
-			if(iterator.nodeType === "1") {
+	let i = 0;
+	while(iterator !== dataContainer.lastChild.previousSibling) {
+			if(iterator.nodeType === 1) {
 				// it's an element node
-				alert(iterator.firstChild.nodeValue);
+				readingTexts[i] = iterator.firstChild.nodeValue;
+				i++;
 			}
 			iterator = iterator.nextSibling;
 	}
-	*/
-	readingTexts[0] = dataContainer.firstChild.firstChild.firstChild.nodeValue;
-	console.log("First reading" + readingTexts[0]);
-
-	readingTexts[1] = dataContainer.firstChild.firstChild.nextElementSibling.firstChild.nodeValue;
-	console.log("Second reading: " + readingTexts[1]);
-
-	readingTexts[2] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.firstChild.nodeValue;
-	console.log("Third reading: " + readingTexts[2]);
-
-	readingTexts[3] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
-	console.log("Fourth reading: " + readingTexts[3]);
-
-	readingTexts[4] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
-	console.log("Fifth reading: " + readingTexts[4]);
-
-	readingTexts[5] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
-	console.log("Sixth reading: " + readingTexts[5]);
-
-	readingTexts[6] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
-	console.log("Seventh reading: " + readingTexts[6]);
-
-	readingTexts[7] = dataContainer.firstChild.firstChild.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.firstChild.nodeValue;
-	console.log("Eighth reading: " + readingTexts[7]);
 
 	// Start at the beginning of the xml document
-	let iterator2 = dataContainer.firstChild.firstChild;
+	let readingTitlesIterator = dataContainer.firstChild.firstChild;
 	let xmlDocLength = dataContainer.firstChild.childNodes.length;
 
 	// Loop over the titles for the accordions as written in the xml's tags
 	for(let i = 0; i < xmlDocLength; i++)
 	{
-		if(iterator2.nodeType === 1) // Check if it is an element tag (nodeType === 1) and not some stray line jump
+		if(readingTitlesIterator.nodeType === 1) // Check if it is an element tag (nodeType === 1) and not some stray line jump
 		{
-			titles += iterator2.nodeName.toUpperCase();
+			titles += readingTitlesIterator.nodeName.toUpperCase();
 			// Add it to the title array in uppercase format
 			titles += ", "; // Add a comma to the title to parse it into an array later
-			iterator2 = iterator2.nextSibling; // Go to the next sibling
+			readingTitlesIterator = readingTitlesIterator.nextSibling; // Go to the next sibling
 		}
 	}
 
