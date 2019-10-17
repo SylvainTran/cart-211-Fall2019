@@ -336,16 +336,46 @@ function displayUxUi(){
 // 	Class exercise October 11, 2019. Animating a box using JS.
 //
 // */
- let coordinateTop = 0;
- let clock = setInterval(frame, 10);
+let coordinateTop = 0;
+//let clock = setInterval(frame, 10);
+let theButton = document.querySelector('.firstBox');
+let movementValue = 4;
+
+document.onkeydown = function(event) {
+	switch(event.keyCode) {
+		case 37: // Left
+			positionX += -movementValue;
+			break;
+		case 39: // Right
+			positionX += movementValue;
+			break;
+		default:
+			break;
+	}
+	theButton.style.left = movementValue + 'px';
+}
 
 function frame() {
  	coordinateTop += 3; // each frame, increase the top's value by 2.
  	console.log(coordinateTop);
- 	let theButton = document.querySelector('.firstBox');
 	theButton.style.top = coordinateTop + 'px';
 
  	if(coordinateTop >= 500) {
  		clearInterval(clock);
  	}
  }
+
+/**
+	Drop down button.
+
+*/
+function dropDown() {
+	let menuDropDown = document.getElementById('.menudropDown');
+
+	if(menuDropDown.classList.display === "none") {
+		menuDropDown.classList.display = "block";
+	}
+	else {
+		menuDropDown.classList.display = "none";
+	}
+}

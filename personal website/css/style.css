@@ -217,3 +217,22 @@ main{
 	position: relative;
 	top: 80px;
 }
+
+/**
+	Class exercise - Oct. 17, 2019.
+
+*/
+.menuButton {
+	border: none;
+	cursor: pointer;
+}
+
+.menu {
+	position: relative;
+}
+
+.menuDropDown {
+	display: none;
+	position: absolute;
+	z-index: 1;
+}
