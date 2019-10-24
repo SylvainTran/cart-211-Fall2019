@@ -70,11 +70,29 @@ html{
 	display: flex;
 	align-items: flex-start;
 	flex-flow: column;
+	flex-wrap: wrap;
 	color: black;
 	font-size: 24px;
 	font-family: 'Ubuntu Mono', monospace;
 }
 
+/**
+	Proposal section's images.
+
+*/
+.content-flex-container div img {
+	width: 30vw;
+	height: 30vw;
+}
+
+/*
+	Zooms an image on hover.
+
+*/
+.content-flex-container div img:hover {
+	width: 50vw;
+	height: 50vw;
+}
 /*
 	Navigation menu on the left. Cursor icon change and subtle transform
 	transitions.
@@ -154,7 +172,7 @@ main{
 	margin-left: 15%;
 	margin-top: 0;
 	height: 1440px;
-	width: 100%;
+	/*width: 100%;*/
 }
 
 /*

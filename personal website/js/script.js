@@ -39,7 +39,7 @@ function createConnection(){
 */
 function clearCurrentContent(){
 	let currentContent = document.getElementsByClassName('treeDisplay')[0];
-	$('.treeDisplay, .projectsDisplay, .blogDisplay, .artDisplay, .uxUiDisplay').each
+	$('.treeDisplay, .projectsDisplay, .blogDisplay, .artDisplay, .uxUiDisplay, .proposalDisplay').each
 	(
 		function(i, obj)
 		{
@@ -330,6 +330,28 @@ function displayUxUi(){
 
 	uxUiDisplay.innerHTML = "I am not a designer.";
 	mainDisplay.append(uxUiDisplay);
+}
+
+/**
+	Displays assignment 2, proposal for the final website.
+
+*/
+function displayProposal(){
+	clearCurrentContent();
+
+	let mainDisplay = document.getElementsByClassName('mainDisplay')[0];
+	let proposalDisplay = document.createElement('div');
+	proposalDisplay.classList.add("proposalDisplay");
+
+	let moodBoard = "<img src=\"proposal/Assignment 2 - 211 - Moodboard.png\" alt=\"moodboard\">";
+	let thumbnail1 = "<img src=\"proposal/thumbnail1.png\" alt=\"thumbnail1\">";
+	let thumbnail2 = "<img src=\"proposal/thumbnail2.png\" alt=\"thumbnail2\">";
+	let thumbnail3 = "<img src=\"proposal/thumbnail3.png\" alt=\"thumbnail3\">";
+	let thumbnail4 = "<img src=\"proposal/thumbnail4.png\" alt=\"thumbnail4\">";
+
+	proposalDisplay.innerHTML = "<a href=\"proposal/Proposal for Final Website.pdf\">Click here to get the proposal's pdf.</a>" + "<br>" +
+															moodBoard + "<br>" + thumbnail1 + "<br>" + thumbnail2 + "<br>" + thumbnail3 + "<br>" + thumbnail4;
+	mainDisplay.append(proposalDisplay);
 }
 
 // /**
