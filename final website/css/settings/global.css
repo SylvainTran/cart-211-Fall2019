@@ -1,0 +1,7 @@
+:root {
+  --text-size--default: 1vw;
+  --text-size--double: var( calc(--text-size--default * 2); );
+  --bt-size--default: 1vw;
+  --bt-size--medium: var( calc(--bt-size--default * 3); );
+  --bt-size--large: var( calc(--bt-size--default * 6); );
+}

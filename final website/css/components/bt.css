@@ -1,0 +1,29 @@
+.bt {
+  /* Display */
+  width: var(--bt-size--medium);
+  height: var(--bt-size--default);
+  display: inline-block;
+
+  /* HTML Box Position */
+  padding: 0vw 0vw;
+  margin: 0vw 0vw;
+
+  /* X, Y Flow Calibration */
+  position: relative;
+
+  /* Colors */
+  background-color: var(--bt-bg-color--default);
+  color: white;
+
+  /* Borders */
+  border: none;
+
+  /* Font */
+  font-size: var(--text-size--double); /* TODO adjust for browser zooming */
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+
+  /* Cursor onMouseOver */
+  cursor: pointer;
+}

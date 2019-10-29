@@ -1,0 +1,17 @@
+/* Global settings */
+@import "settings/global.css";
+/* Global colors */
+@import "settings/colors.css";
+/* Generic layout template */
+@import "generics/html.css";
+/* Header */
+@import "generics/header.css";
+/* Body */
+@import "generics/body.css";
+/* Buttons */
+@import "components/bt.css";
+@import "components/bt-primary.css";
+@import "components/bt_bt-primary_js-login.css";
+@import "components/bt_bt-primary_js-server-status.css";
+/* Text inside banner */
+@import "components/header_banner_text.css";
