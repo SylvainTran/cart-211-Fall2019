@@ -358,10 +358,11 @@ function displayProposal(){
 	mainDisplay.append(proposalDisplay);
 }
 
+/**
 // /**
 // 	Class exercise October 11, 2019. Animating a box using JS.
 //
-// */
+// 
 let coordinateTop = 0;
 //let clock = setInterval(frame, 10);
 let theButton = document.querySelector('.firstBox');
@@ -391,10 +392,10 @@ function frame() {
  	}
  }
 
-/**
+
 	Drop down button.
 
-*/
+
 function dropDown() {
 	let menuDropDown = document.getElementById('.menudropDown');
 
@@ -405,3 +406,4 @@ function dropDown() {
 		menuDropDown.classList.display = "none";
 	}
 }
+*/
