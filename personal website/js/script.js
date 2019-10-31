@@ -91,6 +91,10 @@ function loadTableOfReadings(){
 						"<ul class=\"nested\">" +
 							"<a href=\"#EIGHTH_READING\"><li>Ted Nelson: Computer Libs/Dreams</li></a>" +
 						"</ul>" +
+					"<li><span class=\"caret\">Eighth Class</span>" +
+						"<ul class=\"nested\">" +
+							"<a href=\"#NINTH_READING\"><li>Astra Taylor, Joanne McNeil: The Dads of Tech</li></a>" +
+						"</ul>" +
 				"</ul>";//end of nested ul
 	fieldsetTree.innerHTML = tree; // Injects the tree into the fieldset's innerhtml
 	treeParent.appendChild(fieldsetTree); //appends the div of the tree to the fieldset
