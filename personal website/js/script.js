@@ -379,7 +379,6 @@ document.onkeydown = function(event) {
 		default:
 			break;
 	}
-	theButton.style.left = movementValue + 'px';
 }
 
 function frame() {
