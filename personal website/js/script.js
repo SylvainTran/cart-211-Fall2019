@@ -362,7 +362,7 @@ function displayProposal(){
 // /**
 // 	Class exercise October 11, 2019. Animating a box using JS.
 //
-// 
+//
 let coordinateTop = 0;
 //let clock = setInterval(frame, 10);
 let theButton = document.querySelector('.firstBox');
