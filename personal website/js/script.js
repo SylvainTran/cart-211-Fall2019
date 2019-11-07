@@ -394,10 +394,19 @@ function frame() {
 function dropDown() {
 	let menuDropDown = document.getElementById('.menudropDown');
 
-	if(menuDropDown.classList.display === "none") {
-		menuDropDown.classList.display = "block";
-	}
-	else {
-		menuDropDown.classList.display = "none";
+	document.querySelector('.menuDropDown').style.display = "block";
+
+	// if(menuDropDown.classList.display === "none") {
+	// 	menuDropDown.classList.display = "block";
+	// }
+	// else {
+	// 	menuDropDown.classList.display = "none";
+	// }
+}
+
+window.onclick = function(event) {
+	if(!event.target.matches(".menudropDown") && !event.target.matches(".menuButton")) {
+		let menuDropDown = document.getElementsByClassName(".menudropDown");
+		menuDropDown[0].style.display = "none";
 	}
 }

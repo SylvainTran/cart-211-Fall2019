@@ -1,0 +1,157 @@
+body {
+	color: #020000;
+	font-family: 'Noto Sans', sans-serif;
+	margin:20px;
+	text-align: center;
+	
+}
+
+h1 {
+	font-size: 3em;
+	font-family: 'Turret Road', cursive;
+}
+
+ol{
+	list-style-type: lower-roman;
+}
+
+em {
+	background-color: #D0D800;
+	text-decoration: line-through;
+}
+
+strong {
+	background-color: #00D800;
+	text-decoration: underline;
+}
+/*
+comments
+*/
+img {
+	margin: 50px;
+	margin-right:0px;
+	border: 5px solid #808080;
+	vertical-align:text-top;
+	float:right;
+}
+
+p {
+	background-color: #20D820;
+	margin-left: 50px;
+	margin-right: 0px;
+	padding: 10px;
+	border: 5px dotted #808080;
+	
+	background-color: #D0D8D4;
+	background-image: url("background.jpeg");
+}
+
+.secondbox {
+	height: 1000px;
+	width: 50%;
+	background-color: #FFFFFF;
+	text-align: left;
+	margin: auto;
+	padding: 200px;
+	background-color: #F0F0F0;
+}
+
+.firstbox {
+	width: 200px;
+	background-color: #FFFF00;
+	text-align: left;
+	margin: auto;
+	padding: 10px;
+	border:5px solid #0F2F00;
+	border-radius: 20px;
+	
+	position: relative;
+	top:80px;
+	left:0px;
+}
+
+.firstbox em {
+	color: #FF0000;
+}
+
+figure {
+	float:right;	
+	background-color: #FF0000;
+	padding: 10px;
+}
+
+span {
+	color: #FFFFFF; 
+}
+
+a:link {
+	color: green;
+}
+
+a:hover div {
+	background-color: red;
+	border-color: red;
+}
+
+a:active div {
+	background-color: white;
+	border-color: white;	
+}
+
+a:visited {
+	color: orange;
+}
+
+.flexboxcontainer {
+	background-color: #8080FF;
+	display:flex;
+	flex-direction: column;
+	height: 360px;
+	flex-wrap: wrap;
+}
+
+.flexboxcontainer2 {
+	background-color: #FF80FF;
+	display:flex;
+	width: 200px;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	
+	position: relative;
+	top:20px;
+	right:20px;
+}
+
+.flexboxitem {
+	margin: 10px;
+	width: 30%;
+	height: 60px;
+	background-color: blue;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+}
+
+.menubutton {
+	border: none;
+	cursor: pointer;
+}
+
+.menu {
+	position: relative;
+	display:inline-block;
+}
+
+.menudropdown {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	background-color: white;
+}
+.menudropdown a {
+	color: black;
+	display: block;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);	
+}
+
+.show {
+	display:block;
+}
