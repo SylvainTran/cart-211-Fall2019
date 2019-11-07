@@ -91,6 +91,10 @@ function loadTableOfReadings(){
 						"<ul class=\"nested\">" +
 							"<a href=\"#EIGHTH_READING\"><li>Ted Nelson: Computer Libs/Dreams</li></a>" +
 						"</ul>" +
+					"<li><span class=\"caret\">Eighth Class</span>" +
+						"<ul class=\"nested\">" +
+							"<a href=\"#NINTH_READING\"><li>Astra Taylor, Joanne McNeil: The Dads of Tech</li></a>" +
+						"</ul>" +
 				"</ul>";//end of nested ul
 	fieldsetTree.innerHTML = tree; // Injects the tree into the fieldset's innerhtml
 	treeParent.appendChild(fieldsetTree); //appends the div of the tree to the fieldset
@@ -354,10 +358,11 @@ function displayProposal(){
 	mainDisplay.append(proposalDisplay);
 }
 
+/**
 // /**
 // 	Class exercise October 11, 2019. Animating a box using JS.
 //
-// */
+//
 let coordinateTop = 0;
 //let clock = setInterval(frame, 10);
 let theButton = document.querySelector('.firstBox');
@@ -374,7 +379,6 @@ document.onkeydown = function(event) {
 		default:
 			break;
 	}
-	theButton.style.left = movementValue + 'px';
 }
 
 function frame() {
@@ -387,10 +391,10 @@ function frame() {
  	}
  }
 
-/**
+
 	Drop down button.
 
-*/
+
 function dropDown() {
 	let menuDropDown = document.getElementById('.menudropDown');
 
@@ -410,3 +414,4 @@ window.onclick = function(event) {
 		menuDropDown[0].style.display = "none";
 	}
 }
+*/

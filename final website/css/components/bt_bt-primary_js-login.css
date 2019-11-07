@@ -1,0 +1,15 @@
+/**
+  The login button at the top-right of the website.
+  Loads into the sign-up/login page.
+
+*/
+.bt_bt-primary_js-login {
+  /* HTML Box Position */
+  padding: 2vw 2vw;
+  margin: 1vw 1vw; /* TODO check */
+
+  /* X, Y Flow Calibration */
+  position: absolute !important;
+  top: 0vw;
+  right: 20vw;
+}

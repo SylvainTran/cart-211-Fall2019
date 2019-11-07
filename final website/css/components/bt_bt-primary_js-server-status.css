@@ -1,0 +1,17 @@
+/**
+  The server-status mock button.
+  Loads into the server-status page.
+  Should display dynamic, random persons logged in OR
+  actual people logged in.
+
+*/
+.bt_bt-primary_js-server-status{
+  /* HTML Box Position */
+  padding: 2vw 2vw;
+  margin: 1vw 1vw; /* TODO check */
+
+  /* X, Y Flow Calibration */
+  position: absolute !important;
+  top: 0vw;
+  right: 10vw;
+}

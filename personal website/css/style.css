@@ -4,7 +4,7 @@
 */
 html{
 	background-color:white;
-	height: 1440px;
+	height: 1920px;
 }
 
 /*
@@ -171,7 +171,7 @@ main{
 	flex-flow: row;
 	margin-left: 15%;
 	margin-top: 0;
-	height: 1440px;
+	height: 1920px;
 	/*width: 100%;*/
 }
 
@@ -188,6 +188,14 @@ main{
 	border: 2px solid black;
 }
 
+/*
+	The tree display for the readings page.
+
+*/
+.treeDisplay{
+	width: 100%;
+	height: 100%;
+}
 /*
 	Modifies the field set so that it is 50% width.
 
