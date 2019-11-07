@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="website_structure">
+  <ClassDiagramComponents>
+    <Class name="GameTab" package="" visibility="public" xPosition="106.0" yPosition="176.0">
+      <Fields>
+        <Field name="p5_js" type="Canvas" visibility="private"/>
+        <Field name="twine_js" type="Canvas" visibility="private"/>
+        <Field name="div" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="FriendsListTab" package="" visibility="public" xPosition="422.0" yPosition="176.0">
+      <Fields>
+        <Field name="div" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="PhoneTab" package="" visibility="public" xPosition="106.0" yPosition="329.0">
+      <Fields>
+        <Field name="div" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Inventory" package="" visibility="public" xPosition="422.0" yPosition="316.0">
+      <Fields>
+        <Field name="div" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="CharacterStats" package="" visibility="public" xPosition="422.0" yPosition="424.0">
+      <Fields>
+        <Field name="div" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ServerStatus" package="" visibility="public" xPosition="106.0" yPosition="424.0">
+      <Fields>
+        <Field name="div" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="SinglePage" package="" visibility="public" xPosition="264.0" yPosition="17.0">
+      <Fields>
+        <Field name="main_js" type="Object" visibility="private"/>
+        <Field name="displayDiv" type="Object" visibility="private"/>
+        <Field name="banner" type="Object" visibility="private"/>
+        <Field name="footer" type="Object" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="FriendsListTab" source="SinglePage" target="FriendsListTab" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="Inventory" source="SinglePage" target="Inventory" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="GameTab" source="SinglePage" target="GameTab" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="CharacterStats" source="SinglePage" target="CharacterStats" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="PhoneTab" source="SinglePage" target="PhoneTab" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="ServerStatusPage" source="SinglePage" target="ServerStatus" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
