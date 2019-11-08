@@ -5,7 +5,7 @@
   actual people logged in.
 
 */
-.bt_bt-primary_js-server-status{
+.bt__bt--primary__server--status{
   /* HTML Box Position */
   padding: 2vw 2vw;
   margin: 1vw 1vw; /* TODO check */

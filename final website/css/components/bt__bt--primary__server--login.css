@@ -3,7 +3,7 @@
   Loads into the sign-up/login page.
 
 */
-.bt_bt-primary_js-login {
+.bt__bt--primary__server--login {
   /* HTML Box Position */
   padding: 2vw 2vw;
   margin: 1vw 1vw; /* TODO check */

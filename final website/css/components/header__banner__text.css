@@ -2,7 +2,7 @@
   Text inside the top banner of the website.
 
 */
-.header_banner_text{
+.header__banner__text{
   /* X, Y Flow Calibration */
   position: relative;
   top: 3vw;

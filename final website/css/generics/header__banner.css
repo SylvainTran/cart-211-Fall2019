@@ -2,7 +2,7 @@
   The banner at the top.
 
 */
-.header_banner{
+.header__banner{
   height: 10vw;
   background-color: var(--header-bg-color);
 }

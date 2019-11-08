@@ -2,15 +2,20 @@
   The side box holding the utility screen.
 
 */
-.main_secondary-display {
+.main__section__game--right-display {
   /* Display */
   display: inline-block;
+  height: var(--canvas-size--default);
+  width: var(--canvas-size--default);
+
+  /* Colors */
+  background-color: black;
 
   /* Alignment */
 
   /* HTML Box Position */
   padding: 5vw 5vw;
-  margin: 5vw 5vw;
+  margin: 0.1vw 5vw 0.1vw 1vw; /* top right bottom left */
 
   /* X, Y Flow Calibration */
   position: relative;

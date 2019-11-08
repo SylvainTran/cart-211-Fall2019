@@ -1,8 +1,8 @@
 /**
-  The root flex container for the lower bottom tabs in the website.
+  The root flex container for the tabs in the website.
 
 */
-.tabs-group-bottom{
+.tabs--top-row{
   /* Display */
   display: flex;
 
@@ -12,10 +12,8 @@
 
   /* HTML Box Position */
   padding: 0vw 0vw;
-  margin: 0vw 0vw;
+  margin: 0vw 0vw 0vw 0vw;
 
   /* X, Y Flow Calibration */
   position: relative;
-  bottom: 0;
-  margin-right: 0px;
 }

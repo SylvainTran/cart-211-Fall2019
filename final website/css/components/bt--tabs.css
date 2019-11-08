@@ -2,10 +2,10 @@
   The tab buttons.
 
 */
-.bt-tabs{
+.bt--tabs{
   /* HTML Box Position */
-  padding: 2vw 2vw;
-  margin: 1vw 1vw; /* TODO check */
+  padding: 2vw 4.52vw 2vw 2vw;
+  margin: 0vw 1vw 0vw 1vw;
 
   display: flex;
 }

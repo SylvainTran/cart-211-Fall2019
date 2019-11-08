@@ -1,0 +1,23 @@
+/**
+  The side box holding the main game screen.
+
+*/
+.main__section__game--left-display {
+  /* Display */
+  display: inline-block;
+  height: var(--canvas-size--default);
+  width: var(--canvas-size--default);
+
+  /* Colors */
+  background-color: black;
+
+  /* Alignment */
+
+  /* HTML Box Position */
+  padding: 5vw 5vw 5vw 5vw;
+  margin: 3.06vw 0vw 0.1vw 20vw;
+
+  /* X, Y Flow Calibration */
+  position: relative;
+  bottom: 0;
+}

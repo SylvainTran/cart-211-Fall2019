@@ -1,0 +1,23 @@
+/**
+  Main aside for the left side of the website (holding the
+  main game tab.
+
+*/
+.main__section--left{
+  /* Display */
+  display: inline-block;
+  width: var(--section-size--default);
+
+  /* Alignment */
+
+  /* HTML Box Position */
+  padding: 5vw 0vw 0vw 0vw;
+  margin: -15.33vw 0vw 0vw 0vw;
+
+  /* X, Y Flow Calibration */
+  position: absolute;
+  top: 22vw;
+  bottom: 0;
+  right: 50%;
+  left: 1vw;
+}

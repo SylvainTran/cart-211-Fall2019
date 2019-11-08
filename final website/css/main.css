@@ -5,21 +5,25 @@
 /* Generic layout template */
 @import "generics/html.css";
 /* Header */
-@import "generics/header.css";
+@import "generics/header__banner.css";
 /* Body */
 @import "generics/body.css";
 /* Buttons */
 @import "components/bt.css";
-@import "components/bt-tabs.css";
-@import "components/bt-primary.css";
-@import "components/bt_bt-primary_js-login.css";
-@import "components/bt_bt-primary_js-server-status.css";
+@import "components/bt--tabs.css";
+@import "components/bt--primary.css";
+@import "components/bt__bt--primary__server--login.css";
+@import "components/bt__bt--primary__server--status.css";
 /* Text inside banner */
-@import "components/header_banner_text.css";
+@import "components/header__banner__text.css";
 /* Flex containers */
-@import "components/tabs-group-top.css";
-@import "components/tabs-group-bottom.css";
+@import "components/tabs--top-row.css";
+@import "components/tabs--bottom-row.css";
 /* The displays for the p5.js and Twine canvas */
-@import "components/main_secondary-display.css";
-/* The container for the main_secondary-display */
-@import "components/main_aside-right.css";
+@import "components/main__section__game--left-display.css";
+@import "components/main__section__game--right-display.css";
+/* The container for the main__section displays */
+@import "components/main__section--left.css";
+@import "components/main__section--right.css";
+/* The container for the server rules section */
+@import "components/main__section__server-rules.css";
