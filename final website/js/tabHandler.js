@@ -23,7 +23,7 @@ class TabHandler {
 
   */
   process() {
-    // Updates the sceneWasChanged flag gating (to prevent discrepancy between mousePressed() and process()
+    // Updates the  flag gating (to prevent discrepancy between mousePressed() and process()
     if(this.tabWasChanged === true) {
       this.tabConfig[this.currentTabName].readyForNextTab = true;
     }
@@ -32,57 +32,41 @@ class TabHandler {
     }
   }
   /**
-    Checks what's going on within the scenes.
-    The sceneWasChanged property is only set to true if this event
+    Checks what's going on within the tabs.
+    The  property is only set to true if this event
     occurred in a change scene type of event.
 
   */
   handleTabKeyEvent(sceneKeyPressEvent) {
-    // sceneKeyPressEvent is already garanteed to be non-null
-    switch(sceneKeyPressEvent) {
-      case "exitedSuccessfully":
-        this.sceneWasChanged = true;
-        this.goingToScene = "gameplayTutorial";
-        break;
-      case "successfullyComplained":
-        this.sceneWasChanged = true;
-        this.goingToScene = "zombieAttack";
-        break;
-      default:
-        break;
-    }
-    if(this.sceneConfig[this.currentSceneName].readyForNextScene) {
-      this.changeScene();
-    }
   }
 
   /**
     This function deals with the previous and processing scenes in the queue
-    to update their flag parameters (currentScene)
+    to update their flag parameters (currentTab)
     Updates the processing and current scenes queues
     Updates the previous game scene name so to be able to update its properties
 
   */
   trackTabs() {
-    // Should keep up to date the currentScene information
-    //console.log("Current game scene name: " + this.sceneConfig[this.currentSceneName].sceneName);
-    //console.log("Previous game scene name: " + this.previousGameScene);
-    this.sceneConfig[this.previousGameScene].currentScene = false;
-    this.sceneConfig[this.previousGameScene].readyForNextScene = false;
+    // Should keep up to date the currentTab information
+    //console.log("Current game scene name: " + this.sceneConfig[this.currentTabName].sceneName);
+    //console.log("Previous game scene name: " + this.previousGameTab);
+    this.sceneConfig[this.previousGameTab].currentTab = false;
+    this.sceneConfig[this.previousGameTab].readyForNextTab = false;
   }
 
   changeTab() {
     // Updates the previous game scene property by using the last scene in the queue
-    this.previousGameScene = this.currentSceneQueue.dequeue();
+    this.previousGameTab = this.currentTabQueue.dequeue();
     // Updates the current scene queue
-    this.currentSceneQueue.enqueue(this.goingToScene);
+    this.currentTabQueue.enqueue(this.goingToTab);
     // Adds the new scene to the queue of scenes that are processing
-    this.processingQueue = this.currentSceneQueue.front();
+    this.processingQueue = this.currentTabQueue.front();
     // Go to the next scene by using its name
-    this.sceneObjects[this.goingToScene].updateScene();
-    // Update the currentSceneName property for the scene we are transitioning to
-    this.currentSceneName = this.goingToScene;
+    this.sceneObjects[this.goingToTab].updateTab();
+    // Update the currentTabName property for the scene we are transitioning to
+    this.currentTabName = this.goingToTab;
     // Update the scene config file
-    this.sceneConfig[this.currentSceneName].currentScene = true;
+    this.sceneConfig[this.currentTabName].currentTab = true;
   }
 }

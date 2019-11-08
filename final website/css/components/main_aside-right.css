@@ -1,0 +1,21 @@
+/**
+  Main aside for the right side of the website (holding The
+  four main other tabs than the game tab.
+
+*/
+.main_aside-right{
+  /* Display */
+  display: inline-block;
+
+  /* Alignment */
+
+  /* HTML Box Position */
+  padding: 5vw 5vw;
+  margin: 5vw 5vw;
+
+  /* X, Y Flow Calibration */
+  position: absolute;
+  top: 5vw;
+  bottom: 0;
+  right: 0;
+}

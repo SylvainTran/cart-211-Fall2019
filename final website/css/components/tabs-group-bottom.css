@@ -1,0 +1,21 @@
+/**
+  The root flex container for the lower bottom tabs in the website.
+
+*/
+.tabs-group-bottom{
+  /* Display */
+  display: flex;
+
+  /* Alignment */
+  align-content: space-between;
+  flex-direction: row;
+
+  /* HTML Box Position */
+  padding: 0vw 0vw;
+  margin: 0vw 0vw;
+
+  /* X, Y Flow Calibration */
+  position: relative;
+  bottom: 0;
+  margin-right: 0px;
+}

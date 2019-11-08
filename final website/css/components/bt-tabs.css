@@ -1,0 +1,11 @@
+/**
+  The tab buttons.
+
+*/
+.bt-tabs{
+  /* HTML Box Position */
+  padding: 2vw 2vw;
+  margin: 1vw 1vw; /* TODO check */
+
+  display: flex;
+}

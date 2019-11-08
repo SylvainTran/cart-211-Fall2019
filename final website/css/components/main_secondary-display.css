@@ -1,0 +1,18 @@
+/**
+  The side box holding the utility screen.
+
+*/
+.main_secondary-display {
+  /* Display */
+  display: inline-block;
+
+  /* Alignment */
+
+  /* HTML Box Position */
+  padding: 5vw 5vw;
+  margin: 5vw 5vw;
+
+  /* X, Y Flow Calibration */
+  position: relative;
+  bottom: 0;
+}

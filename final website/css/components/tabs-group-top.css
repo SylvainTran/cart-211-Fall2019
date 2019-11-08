@@ -1,0 +1,19 @@
+/**
+  The root flex container for the tabs in the website.
+
+*/
+.tabs-group-top{
+  /* Display */
+  display: flex;
+
+  /* Alignment */
+  align-content: space-between;
+  flex-direction: row;
+
+  /* HTML Box Position */
+  padding: 0vw 0vw;
+  margin: 0vw 0vw;
+
+  /* X, Y Flow Calibration */
+  position: relative;
+}
