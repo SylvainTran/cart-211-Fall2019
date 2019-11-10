@@ -1,0 +1,20 @@
+{
+  "gameTab": {
+    "currentTab": true,
+    "completedStory": false
+  },
+  "friendsListTab": {
+    "currentTab": false,
+    "offline": false
+  },
+  "phoneTab": {
+    "currentTab": false,
+    "calling": false
+  },
+  "inventory": {
+    "currentTab": false
+  },
+  "characterStats": {
+    "currentTab": false
+  }
+}

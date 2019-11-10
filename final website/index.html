@@ -7,9 +7,11 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="js/tabHandler.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/jQueryAjax.js"></script>
+  <script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
 </head>
 
-<body>
+<body onload="$(document).ready(function() { getSceneData(); getSceneConfig(); } );">
   <header>
     <div class="header__banner">
       <div class="header__banner__text">Discursia Online - Alpha Version</div>
@@ -21,7 +23,6 @@
     <div class="main__section__server-rules">
       <div class="main__section__server-rules__text">
         Server rules. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, nisi id rhoncus condimentum, quam lorem rutrum justo, non accumsan lectus diam non tortor. Nam lobortis mi vitae lacinia gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ac ligula tortor. Cras quis erat bibendum nunc interdum pulvinar. Integer eu lorem elit. Donec sit amet faucibus nunc. Curabitur varius euismod pulvinar. Donec fermentum enim sed scelerisque convallis. Pellentesque ligula eros, egestas quis augue imperdiet, blandit sodales nunc. Curabitur dignissim purus tellus, eu efficitur quam bibendum ut.
-
       </div>
     </div>
     <div class="main__section__game--left-display">
