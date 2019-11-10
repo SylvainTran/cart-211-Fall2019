@@ -25,5 +25,6 @@
 /* The container for the main__section displays */
 @import "components/main__section--left.css";
 @import "components/main__section--right.css";
-/* The container for the server rules section */
+/* The container and text for the server rules section */
 @import "components/main__section__server-rules.css";
+@import "components/main__section__server-rules__text.css";

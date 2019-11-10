@@ -11,9 +11,9 @@
   flex-direction: row;
 
   /* HTML Box Position */
-  padding: 0vw 0vw;
+  padding: 0vw 0vw 0vw 0vw;
   margin: 0vw 0vw 0vw 0vw;
 
   /* X, Y Flow Calibration */
-  position: relative;
+  position: static;
 }

@@ -1,0 +1,28 @@
+/**
+  The text inside the server-rules section.
+
+*/
+.main__section__server-rules__text {
+  /* Display */
+  height: var(calc(var(--section-size--default) ) );
+  width: var(calc(var(--section-size--default)));
+
+  /* Colors */
+  color: blue;
+  background-color: white;
+
+  /* Alignment */
+  text-align: center;
+  vertical-align: middle;
+
+  /* HTML Box Position */
+  padding: 0vw 0vw 0vw 0vw;
+  margin: 0vw 0vw 0vw 0vw; /* top right bottom left */
+
+  /* X, Y Flow Calibration */
+  position: relative;
+  top: 0vw;
+  left: 0vw;
+  right: 0vw;
+  bottom: 0vw;
+}

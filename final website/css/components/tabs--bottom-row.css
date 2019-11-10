@@ -5,17 +5,17 @@
 .tabs--bottom-row{
   /* Display */
   display: flex;
+  width: 32vw;
 
   /* Alignment */
-  align-content: space-between;
-  flex-direction: row;
+  align-content: space-around;
+  flex-direction: column;
 
   /* HTML Box Position */
-  padding: 0vw 0vw;
+  padding: 0vw 0vw 0vw 0vw;
   margin: 0vw 0vw 0vw 0vw;
 
   /* X, Y Flow Calibration */
-  position: relative;
-  bottom: 0;
-  margin-right: 0px;
+  position: static;
+  float: right;
 }

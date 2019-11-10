@@ -5,22 +5,21 @@
 .main__section__server-rules {
   /* Display */
   display: inline-block;
-  height: var(calc(var(--section-size--default) ) );
-  width: var(calc(var(--section-size--default) ) );
+  height: 50vw;
+  width: 15vw;
 
   /* Colors */
-  background-color: black;
 
   /* Alignment */
 
   /* HTML Box Position */
-  padding: 1vw 0vw 0vw 1vw;
-  margin: 5vw 5vw 1vw 1vw; /* top right bottom left */
+  padding: 0vw 0vw 0vw 0vw;
+  margin: 0vw 0vw 0vw 0vw; /* top right bottom left */
 
   /* X, Y Flow Calibration */
   position: absolute;
-  top: 12vw;
+  top: 4vw;
   left: 0vw;
-  right: 25vw;
+  right: 0vw;
   bottom: 0vw;
 }

@@ -5,18 +5,19 @@
 */
 .main__section--right{
   /* Display */
-  display: inline-block;
+  display: flex;
   width: var(--section-size--default);
-
+  align-content: space-around;
+  flex-direction: column;
   /* Alignment */
 
   /* HTML Box Position */
-  padding: 5vw 5vw 0vw 0vw;
+  padding: 0vw 5vw 0vw 0vw;
   margin: 0vw 0vw 0vw 5vw;
 
   /* X, Y Flow Calibration */
   position: absolute;
-  top: 22vw;
+  top: 8.1vw;
   bottom: 0;
   right: 0;
   left: 50%;
