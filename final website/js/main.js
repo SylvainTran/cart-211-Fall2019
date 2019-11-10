@@ -11,6 +11,11 @@ let tabObjects;
 // Tab Handler
 let tabHandler;
 
+document.addEventListener("click", function() {
+  let leftCanvasText = document.querySelector('.main__Section__game--left-display-text');
+  leftCanvasText.innerHTML = "Welcome, Joachim";
+});
+
 function preload() {
   tabConfig = loadJSON("data/tabs/sceneConfig.json");
   tabData = loadJSON("data/tabs/sceneData.json");
