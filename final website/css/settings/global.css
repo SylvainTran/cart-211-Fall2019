@@ -1,6 +1,7 @@
 :root {
   --section-size--default: 40%;
   --canvas-size--default: 20vw;
+  --twine-canvas-size--default: 30vw;
   --text-size--default: 1vw;
   --text-size--double: var( calc(--text-size--default * 2); );
   --bt-size--default: 1vw;

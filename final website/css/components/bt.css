@@ -11,6 +11,9 @@
   /* X, Y Flow Calibration */
   position: relative;
 
+  /* Font */
+  font-family: Consolas, monaco, monospace;
+
   /* Colors */
   background-color: var(--bt-bg-color--default);
   color: white;

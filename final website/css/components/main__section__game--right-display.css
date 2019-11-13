@@ -6,7 +6,7 @@
   /* Display */
   display: inline-block;
   height: var(--canvas-size--default);
-  width: var(--canvas-size--default);
+  width: var(--twine-canvas-size--default);
 
   /* Colors */
   background-color: black;
@@ -19,5 +19,5 @@
 
   /* X, Y Flow Calibration */
   position: relative;
-  bottom: 0;
+  top: -1vw;
 }

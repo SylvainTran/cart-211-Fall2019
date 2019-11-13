@@ -5,7 +5,7 @@
 .tabs--bottom-row{
   /* Display */
   display: flex;
-  width: 32vw;
+  width: 42vw;
 
   /* Alignment */
   align-content: space-around;

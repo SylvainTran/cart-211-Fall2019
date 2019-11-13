@@ -28,3 +28,7 @@
 /* The container and text for the server rules section */
 @import "components/main__section__server-rules.css";
 @import "components/main__section__server-rules__text.css";
+/* The footer styling for the console status */
+@import "components/footer__console-status.css";
+/* The greeting inside of the twine' screen. */
+@import "components/main__section__game--right-display--greetings.css";

@@ -1,0 +1,14 @@
+/**
+  The greetings in the Twine canvas.
+
+*/
+.main__section__game--right-display--greetings {
+  /* Font */
+  font-family: Consolas, monaco, monospace;
+
+  /* Colors */
+  color: yellow;
+
+  /* Alignment */
+  text-align: center;
+}

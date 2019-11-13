@@ -19,17 +19,17 @@
     "message": "Hello."
   },
   "inventory": {
-    "items": ["Elixir", "Infinity Tablets"],
-    "equipment": ["Excalibur", "Shield of Eternity"],
-    "spells": ["Stalk", "Ghost", "Expel", "Teleport", "Reunite"],
+    "items": [" Elixir x1", " Infinity Tablets x2,"],
+    "equipment": [" Excalibur", " Shield of Eternity"],
+    "spells": [" Stalk", " Ghost", " Expel", " Teleport", " Reunite", " Fireball x5"],
     "passives": ["RaiseUnity", "Leadership", "Defense"],
     "artefacts": ["GM Banner"]
   },
   "characterStats": {
-    "acuity": 95,
-    "courage": 96,
-    "resistance": 44,
-    "wisdom": 99,
-    "strength": 99
+    "acuity": "97/99",
+    "courage": "96/99",
+    "resistance": "44/99",
+    "wisdom": "99/99",
+    "strength": "99/99"
   }
 }

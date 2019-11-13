@@ -1,0 +1,24 @@
+/**
+  The footer's console status.
+
+*/
+.footer__console-status {
+  /* Display */
+  display: inline-block;
+  height: 5vw;
+  width: 40vw;
+  font-family: Consolas, monaco, monospace;
+
+  /* Colors */
+  background-color: black;
+
+  /* Alignment */
+
+  /* HTML Box Position */
+  padding: 5vw 0vw 0vw 0vw;
+  margin: 0vw 0vw 0.1vw 0vw;
+
+  /* X, Y Flow Calibration */
+  position: relative;
+  right: 5vw;
+}

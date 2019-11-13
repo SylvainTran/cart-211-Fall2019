@@ -3,4 +3,5 @@ html {
   background-image: linear-gradient(to bottom right, red, blue);
   background-repeat: no-repeat;
   background-size: cover;
+  height: 100vw;
 }
