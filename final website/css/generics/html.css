@@ -1,7 +1,3 @@
 html {
-  background-color: var(--html_body-bg-color--default);
-  background-image: linear-gradient(to bottom right, red, blue);
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vw;
+
 }

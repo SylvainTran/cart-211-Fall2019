@@ -1,7 +1,6 @@
 .console-input {
   /* Display */
-  height: var(--twine-canvas-height--default);
-  width: var(--twine-canvas-width--default);
+
 
   /* Font */
   font-family: Consolas, monaco, monospace;
@@ -14,7 +13,7 @@
   border: none;
 
   /* Font */
-  font-size: 14px;
+  font-size: 44px;
 
   /* Cursor onMouseOver */
   cursor: pointer;

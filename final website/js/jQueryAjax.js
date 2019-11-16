@@ -2,7 +2,7 @@ let sceneData, sceneConfig;
 let consoleLogDefaultText = "Microsoft Windows [Version 10.0.17763.805] <br>" +
         "(c) 2018 Microsoft Corporation. All rights reserved. <br> <br>" +
         "C:\\Users\\jdesplan>";
-let inputField = "<br><br>C:> Enter command: <input class=\"consoleInput\" type=\"text\" style=\"background-color: black; color: white;\">";
+let inputField = "<br><br>C:> Enter command: <input class=\"console-input\" type=\"text\" style=\"background-color: black; color: white;\">";
 let inventoryStatus;
 /*
 	Asynchronously, using Jquery Ajax, fetches the sceneData and sceneConfig.json.
@@ -54,8 +54,8 @@ function getSceneConfig(){
 */
 function getInventory(){
 	console.log("Attempting to fetch the inventory from the data stored earlier...");
-	inventoryStatus = consoleLogDefaultText + " " + sceneData.inventory.items + sceneData.inventory.equipment + sceneData.inventory.spells + inputField;
-	document.querySelector('.footer__console-status').innerHTML = inventoryStatus;
+	inventoryStatus = consoleLogDefaultText + " " + sceneData.inventory.items + sceneData.inventory.equipment + sceneData.inventory.spells;
+	document.querySelector('.footer__console-status').innerHTML = inventoryStatus + inputField;
 }
 /*
 	Gets the character stats from sceneData.json (for now, but will be using local storage later).
