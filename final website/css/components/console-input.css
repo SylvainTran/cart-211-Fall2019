@@ -1,23 +1,21 @@
-/**
-  The footer's console status.
-
-*/
-.footer__console-status {
+.console-input {
   /* Display */
-  display: inline-block;
   height: var(--twine-canvas-height--default);
   width: var(--twine-canvas-width--default);
 
   /* Font */
   font-family: Consolas, monaco, monospace;
-  font-size: 14px;
 
   /* Colors */
   background-color: black;
+  color: white;
 
-  /* Alignment */
+  /* Borders */
+  border: none;
 
-  /* HTML Box Position */
-  padding: 5vw 0vw 5vw 0vw;
-  margin: 0vw 0vw 0.1vw 0vw;
+  /* Font */
+  font-size: 14px;
+
+  /* Cursor onMouseOver */
+  cursor: pointer;
 }

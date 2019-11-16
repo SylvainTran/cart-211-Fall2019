@@ -5,6 +5,7 @@
 .tabs--top-row{
   /* Display */
   display: flex;
+  width:  var(--twine-canvas-size--default);
 
   /* Alignment */
   align-content: space-between;

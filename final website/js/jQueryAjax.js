@@ -2,6 +2,7 @@ let sceneData, sceneConfig;
 let consoleLogDefaultText = "Microsoft Windows [Version 10.0.17763.805] <br>" +
         "(c) 2018 Microsoft Corporation. All rights reserved. <br> <br>" +
         "C:\\Users\\jdesplan>";
+let inputField = "<br><br>C:> Enter command: <input class=\"consoleInput\" type=\"text\" style=\"background-color: black; color: white;\">";
 let inventoryStatus;
 /*
 	Asynchronously, using Jquery Ajax, fetches the sceneData and sceneConfig.json.
@@ -53,7 +54,7 @@ function getSceneConfig(){
 */
 function getInventory(){
 	console.log("Attempting to fetch the inventory from the data stored earlier...");
-	inventoryStatus = consoleLogDefaultText + " " + sceneData.inventory.items + sceneData.inventory.equipment + sceneData.inventory.spells;
+	inventoryStatus = consoleLogDefaultText + " " + sceneData.inventory.items + sceneData.inventory.equipment + sceneData.inventory.spells + inputField;
 	document.querySelector('.footer__console-status').innerHTML = inventoryStatus;
 }
 /*
@@ -63,7 +64,7 @@ function getInventory(){
 */
 function getCharacterStats(){
 	console.log("Attempting to fetch the character stats from the data stored earlier...");
-	document.querySelector('.footer__console-status').innerHTML = consoleLogDefaultText + " " + "Acuity: " + sceneData.characterStats.acuity + " Courage: " + sceneData.characterStats.courage + " Resistance: " + sceneData.characterStats.resistance + " Wisdom: " + sceneData.characterStats.wisdom + " Strength: " + sceneData.characterStats.strength;
+	document.querySelector('.footer__console-status').innerHTML = consoleLogDefaultText + " " + "Acuity: " + sceneData.characterStats.acuity + " Courage: " + sceneData.characterStats.courage + " Resistance: " + sceneData.characterStats.resistance + " Wisdom: " + sceneData.characterStats.wisdom + " Strength: " + sceneData.characterStats.strength + inputField;
 }
 /*
 	Gets the friends list from sceneData.json (for now, but will be using local storage later).
@@ -72,5 +73,5 @@ function getCharacterStats(){
 */
 function getFriendsList(){
 	console.log("Attempting to fetch the friends list from the data stored earlier...");
-	document.querySelector('.footer__console-status').innerHTML = consoleLogDefaultText + " " + "Friends List: " + sceneData.friendsListTab[0].firstName + ", " + sceneData.friendsListTab[1].firstName;
+	document.querySelector('.footer__console-status').innerHTML = consoleLogDefaultText + " " + "Friends List: " + sceneData.friendsListTab[0].firstName + ", " + sceneData.friendsListTab[1].firstName + inputField;
 }
