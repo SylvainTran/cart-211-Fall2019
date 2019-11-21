@@ -32,3 +32,5 @@
 @import "components/footer__console-status.css";
 /* The greeting inside of the twine' screen. */
 @import "components/main__section__game--right-display--greetings.css";
+/* The console input. */
+@import "components/console-input.css";

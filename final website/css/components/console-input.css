@@ -1,0 +1,20 @@
+.console-input {
+  /* Display */
+
+
+  /* Font */
+  font-family: Consolas, monaco, monospace;
+
+  /* Colors */
+  background-color: black;
+  color: white;
+
+  /* Borders */
+  border: none;
+
+  /* Font */
+  font-size: 44px;
+
+  /* Cursor onMouseOver */
+  cursor: pointer;
+}
