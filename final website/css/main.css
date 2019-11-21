@@ -34,3 +34,11 @@
 @import "components/main__section__game--right-display--greetings.css";
 /* The console input. */
 @import "components/console-input.css";
+/* The tweaked Twine CSS */
+@import "twineCSS-2.css";
+/* Flex container */
+@import "objects/flexContainer.css";
+/* Hero image */
+@import "objects/heroImage.css";
+/* The greeter */
+@import "components/main__Section__game--left-display-text.css";

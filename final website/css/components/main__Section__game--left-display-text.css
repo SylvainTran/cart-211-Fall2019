@@ -2,13 +2,14 @@
   The side box holding the main game screen.
 
 */
-.main__section__game--left-display {
+.main__section__game--left-display-text {
   /* Display */
-  height: var(--canvas-size--default);
-  width: var(--canvas-size--default);
 
   /* Colors */
-  background-color: black;
+
+  /* Font */
+  font-family: 'Crimson Text', serif;
+  font-size: 42px;
 
   /* Alignment */
 

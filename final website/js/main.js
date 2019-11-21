@@ -28,3 +28,13 @@ function tabSetup() {
     "ServerStatusTab": new ServerStatusTab()
   }
 }
+
+function removeHrefsTwine() {
+  alert("removing hrefs");
+  const twLinks1 = document.querySelectorAll('tw-link');
+  alert(twLinks1.length);
+  for(let i = 0; i < twLinks1.length; i++) {
+    twLinks1.removeAttribute('href');
+    alert("removed attr");
+  }
+}

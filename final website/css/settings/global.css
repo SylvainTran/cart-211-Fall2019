@@ -1,6 +1,6 @@
 :root {
   --section-size--default: 40%;
-  --canvas-size--default: 20vw;
+  --canvas-size--default: 100%;
   --twine-canvas-height--default: 10vw;
   --twine-canvas-width--default: 45vw;
   --text-size--default: 1vw;

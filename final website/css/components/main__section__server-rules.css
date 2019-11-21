@@ -4,8 +4,7 @@
 */
 .main__section__server-rules {
   /* Display */
-  display: inline-block;
-  height: 50vw;
+  max-width: 15%;
   width: 15vw;
 
   /* Colors */
@@ -13,13 +12,12 @@
   /* Alignment */
 
   /* HTML Box Position */
-  padding: 0vw 0vw 0vw 0vw;
-  margin: 0vw 0vw 0vw 0vw; /* top right bottom left */
+
 
   /* X, Y Flow Calibration */
-  position: absolute;
-  top: 4vw;
-  left: 0vw;
-  right: 0vw;
-  bottom: 0vw;
+
+
+  /* Position and center the image to scale nicely on all screens */
+
+  /* Background */
 }

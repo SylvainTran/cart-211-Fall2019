@@ -8,73 +8,98 @@
   <script src="js/tabHandler.js"></script>
   <script src="js/main.js"></script>
   <script src="js/jQueryAjax.js"></script>
+  <script src="js/getUserPrompt.js"></script>
   <script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Alata|Crimson+Text&display=swap" rel="stylesheet">
   <!-- p5.js Library script(s) -->
   <script src="p5/libraries/p5.min.js"></script>
   <script src="p5/libraries/p5.sound.min.js"></script>
   <script src="p5/libraries/p5.dom.min.js"></script>
-  <!-- p5.js -->
+  <!-- p5.js
   <script src="p5/p5-main.js"></script>
+  -->
   <!-- Start of Twine CSS !-->
   <link rel="stylesheet" type="text/css" title="Twine CSS" href="css/twineCSS.css">
   <!-- End of Twine CSS !-->
 </head>
 
-<body onload="$(document).ready(function() { getSceneData(); getSceneConfig(); } );">
+<body onload="$(document).ready(function() { getSceneData(); getSceneConfig();} );">
 
   <header>
     <div class="header__banner">
-      <div class="header__banner__text">Discursia Online - Alpha Version</div>
+      <div class="header__banner__text">Duckguy Entertainment - Discursia Online</div>
     </div>
     <div class="bt bt--primary bt__bt--primary__server--login">Login</div>
     <div class="bt bt--primary bt__bt--primary__server--status">Server Status: <span style="color:green">59 online!</span></div>
   </header>
-
-  <div class="main__section--left">
+  <div class="hero-image">
+    <div class="hero-text">
+      <h1>Discursia Online</h1>
+      <p>A Text-Based Browser Game Apparently Endorsed By The Internet.</p>
+      <div class ="bt bt--primary">Play Now</div>
+    </div>
+  </div>
+  <div class="hero-image2">
+    <div class="hero-text">
+      <h1>Latest News</h1>
+      <p>New raid release: Sad Face Gang Attacks</p>
+    </div>
+  </div>
+  <div class="hero-image3">
+    <div class="hero-text">
+      <h1>Return to Discursia</h1>
+      <p>
+        Duckguy Entertainment proudly presents the critically-acclaimed role-playing game, Discursia. Welcome to Discursia I: Attack of the Sad Faces. We are revisiting the rich narrative, beautiful environments, and tactical combat that made Discursia one of the least-known PC games of all time.
+        Our team wants to take you on a first journey to Discursia. We couldn't be more excited to get all of you involved in Discursia. From all of us at Duckguy Entertainment, thank you for your continued support!
+      </p>
+    </div>
+  </div>
+  <div class="hero-image4">
+    <div class="mainContainer">
     <div class="main__section__server-rules">
       <div class="main__section__server-rules__text">
-        Server rules. <br><br> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rhoncus, nisi id rhoncus condimentum, quam lorem rutrum justo, non accumsan lectus diam non tortor. Nam lobortis mi vitae lacinia gravida. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus. Vestibulum ac ligula tortor. Cras quis erat bibendum nunc interdum pulvinar. Integer eu lorem elit. Donec sit amet faucibus nunc. Curabitur varius euismod pulvinar. Donec fermentum enim sed
-        scelerisque convallis. Pellentesque ligula eros, egestas quis augue imperdiet, blandit sodales nunc. Curabitur dignissim purus tellus, eu efficitur quam bibendum ut.
+        Playing In The Browser: Look at your right!
       </div>
-    </div>
-    <div class="main__section__game--left-display">
       <div class="main__Section__game--left-display-text" style="text-align: center;">
-        Primary game canvas.
       </div>
-      <div id="p5CanvasDisplay"></div>
     </div>
-  </div>
-
-  <div class="main__section--right">
-    <div class="tabs--top-row">
-      <button class="bt bt--tabs" onclick="getInventory(); promptPlayer();">Inventory</button>
-      <button class="bt bt--tabs" onclick="getCharacterStats();">Character Stats</button>
-      <button class="bt bt--tabs" onclick="getFriendsList();">Friends List</button>
-      <button class="bt bt--tabs">Pick Up The Phone[Not implemented yet.]</button>
-    </div>
-
-    <div class="tabs--bottom-row">
-
-    </div>
-    <div class="main__section__game--right-display">
-      <div class="main__section__game--right-display--greetings">
-        Welcome to Discursia. You are currently offline. Click the tabs and then input the command in the console below. [Inputting not implemented yet.]
-        <!-- tw-story is where Twine inserts story data !-->
-        <tw-story></tw-story>
+    <div class="flexContainer"> <!-- Start of flex container -->
+      <div class="main__section--left">
+        <div class="main__section__game--left-display">
+          <div id="#"></div> <!-- p5 canvas -->
+        </div>
       </div>
-      <footer class="footer__console-status">
-        Microsoft Windows [Version 10.0.17763.805] <br>
-        (c) 2018 Microsoft Corporation. All rights reserved. <br> <br>
-        <form>
-          C:\Users\jdesplan><input id="consoleInput" type="text"></input>
-        </form>
-      </footer>
-    </div>
-  </div>
 
+      <div class="main__section--right">
+        <div class="tabs--top-row">
+          <button class="bt bt--tabs" onclick="getInventory();">Inventory</button>
+          <button class="bt bt--tabs" onclick="getCharacterStats();">Character Stats</button>
+          <button class="bt bt--tabs" onclick="getFriendsList();">Friends List</button>
+          <button class="bt bt--tabs">Pick Up The Phone[Not implemented yet.]</button>
+        </div>
+
+        <div class="tabs--bottom-row">
+
+        </div>
+          <div class="main__section__game--right-display">
+            <div class="main__section__game--right-display--greetings">
+              Welcome to Discursia. You are currently offline. Click the tabs and then input the command in the console below. [Inputting not implemented yet.]
+              <!-- tw-story is where Twine inserts story data !-->
+              <tw-story></tw-story>
+            </div>
+            <footer class="footer__console-status">
+              Microsoft Windows [Version 10.0.17763.805] <br>
+              (c) 2018 Microsoft Corporation. All rights reserved. <br> <br>
+              <form>
+                C:\Users\jdesplan><input class="consoleInput" type="text" onchange="testCommand()"></input>
+              </form>
+            </footer>
+          </div>
+      </div> <!-- Main section right end -->
+    </div> <!-- End of flex container -->
+  </div> <!-- End of main container -->
+</div> <!-- End of hero image4 -->
 </body>
-
 <!-- Start of Twine Story !-->
 <tw-storydata name="Discursia" startnode="1" creator="Twine" creator-version="2.3.5" ifid="16A07812-03B2-4A67-A2BD-F7B549D72832" zoom="0.6" format="Harlowe" format-version="3.1.0" options="" hidden>
 

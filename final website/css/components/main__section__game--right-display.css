@@ -4,7 +4,6 @@
 */
 .main__section__game--right-display {
   /* Display */
-  display: inline-block;
   height: var(--twine-canvas-height--default);
   width: var(--twine-canvas-width--default);
 
@@ -18,6 +17,5 @@
   margin: 0.1vw 5vw 0.1vw 1vw; /* top right bottom left */
 
   /* X, Y Flow Calibration */
-  position: relative;
-  top: -1vw;
+
 }

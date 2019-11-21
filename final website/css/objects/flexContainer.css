@@ -1,0 +1,25 @@
+
+/**
+  The main flex container.
+
+*/
+.mainContainer {
+  display: flex;
+  align-items: center;
+  flex-flow: row;
+  flex-direction: row;
+  align-self: flex-start;
+
+}
+
+/**
+  The flex container containing both screens.
+
+*/
+.flexContainer {
+  /* Display */
+  display: flex;
+  align-items: center;
+  flex-flow: colum;
+  flex-direction: column;
+}

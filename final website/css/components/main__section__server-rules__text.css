@@ -7,22 +7,13 @@
   height: var(calc(var(--section-size--default) ) );
   width: var(calc(var(--section-size--default)));
 
+  /* Font */
+  font-family: 'Crimson Text', serif;
+  font-size: 42px;
+
   /* Colors */
-  color: blue;
-  background-color: white;
+  color: white;
 
   /* Alignment */
   text-align: center;
-  vertical-align: middle;
-
-  /* HTML Box Position */
-  padding: 0vw 0vw 0vw 0vw;
-  margin: 0vw 0vw 0vw 0vw; /* top right bottom left */
-
-  /* X, Y Flow Calibration */
-  position: relative;
-  top: 0vw;
-  left: 0vw;
-  right: 0vw;
-  bottom: 0vw;
 }
