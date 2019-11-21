@@ -1,0 +1,6 @@
+class GameTab {
+  constructor() {
+
+  }
+
+}

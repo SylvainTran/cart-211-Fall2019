@@ -76,7 +76,10 @@
       <Methods/>
     </Class>
     <Class name="PhoneTabHandler" package="" visibility="public" xPosition="478.0" yPosition="482.0">
-      <Fields/>
+      <Fields>
+        <Field name="displayPhoneCall" type="Object" visibility="private"/>
+        <Field name="getData" type="Object" visibility="private"/>
+      </Fields>
       <Constructors/>
       <Methods/>
     </Class>
@@ -88,6 +91,7 @@
     <Class name="GameTab" package="" visibility="public" xPosition="692.0" yPosition="139.0">
       <Fields>
         <Field name="choseSomething_A" type="bool" visibility="private"/>
+        <Field name="untitledField" type="Object" visibility="private"/>
       </Fields>
       <Constructors/>
       <Methods/>
@@ -99,15 +103,15 @@
     </Enum>
   </ClassDiagramComponents>
   <ClassDiagramRelations>
-    <IsRelation name="is" source="PhoneTabHandler" target="TabHandler"/>
-    <HasRelation name="sceneData" source="Main" target="sceneData.json" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="ServerStatusTab" target="TabHandler"/>
+    <IsRelation name="is" source="PhoneTabHandler" target="TabHandler"/>
+    <IsRelation name="is" source="GameCanvasHandler" target="TabHandler"/>
+    <IsRelation name="is" source="InventoryTabHandler" target="TabHandler"/>
+    <HasRelation name="sceneConfig" source="Main" target="sceneConfig.json" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="FriendListTabHandler" target="TabHandler"/>
     <HasRelation name="Tab" source="Components" target="Tab" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <HasRelation name="tabHandler" source="Main" target="TabHandler" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
-    <IsRelation name="is" source="FriendListTabHandler" target="TabHandler"/>
-    <HasRelation name="sceneConfig" source="Main" target="sceneConfig.json" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="sceneData" source="Main" target="sceneData.json" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
     <IsRelation name="is" source="CharacterStatsTabHandler" target="TabHandler"/>
-    <IsRelation name="is" source="InventoryTabHandler" target="TabHandler"/>
-    <IsRelation name="is" source="GameCanvasHandler" target="TabHandler"/>
   </ClassDiagramRelations>
 </ClassDiagram>

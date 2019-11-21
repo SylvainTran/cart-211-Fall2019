@@ -48,7 +48,7 @@
 
   <div class="main__section--right">
     <div class="tabs--top-row">
-      <button class="bt bt--tabs" onclick="getInventory();">Inventory</button>
+      <button class="bt bt--tabs" onclick="getInventory(); promptPlayer();">Inventory</button>
       <button class="bt bt--tabs" onclick="getCharacterStats();">Character Stats</button>
       <button class="bt bt--tabs" onclick="getFriendsList();">Friends List</button>
       <button class="bt bt--tabs">Pick Up The Phone[Not implemented yet.]</button>
@@ -66,7 +66,9 @@
       <footer class="footer__console-status">
         Microsoft Windows [Version 10.0.17763.805] <br>
         (c) 2018 Microsoft Corporation. All rights reserved. <br> <br>
-        C:\Users\jdesplan>_
+        <form>
+          C:\Users\jdesplan><input id="consoleInput" type="text"></input>
+        </form>
       </footer>
     </div>
   </div>
@@ -94,6 +96,9 @@
     [[Rip off the cables from the speakers.]]
     [[Throw an old sausage at the screen.]]
     [[Scream in agony again.]]
+
+    Enter "hack computer" in the console to get through.
+
   </tw-passagedata>
   <tw-passagedata pid="3" name="Close the computer." tags="" position="NaN,NaN" size="100,100">
     You closed your computer. Congratulations. (+50 wisdom.)
