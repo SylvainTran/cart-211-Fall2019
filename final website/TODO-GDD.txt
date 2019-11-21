@@ -1,2 +1,2 @@
-Fix the anchoring on tagName = TW-LINK
-Fix the positioning in the website, add hero image, make it better
+NOT OK - Fix the anchoring on tagName = TW-LINK
+OK - Fix the positioning in the website, add hero image, make it better

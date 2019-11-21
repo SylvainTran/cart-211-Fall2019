@@ -4,9 +4,8 @@
 */
 .footer__console-status {
   /* Display */
-  display: inline-block;
-  height: var(--twine-canvas-height--default);
-  width: var(--twine-canvas-width--default);
+  height: 5vw;
+  width: 100%;
 
   /* Font */
   font-family: Consolas, monaco, monospace;
@@ -20,4 +19,8 @@
   /* HTML Box Position */
   padding: 5vw 0vw 5vw 0vw;
   margin: 0vw 0vw 0.1vw 0vw;
+
+  position: fixed;
+  bottom: 0vw;
+
 }

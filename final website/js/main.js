@@ -3,9 +3,9 @@
 
 */
 // Scene related variables
-let tabConfig;
 let tabData;
 let tabObjects;
+let tabConfig;
 // Tab Handler
 let tabHandler;
 
@@ -18,7 +18,6 @@ document.addEventListener("click", function() {
 
 */
 function tabSetup() {
-  tabHandler = new tabHandler(tabData);
   tabObjects = {
     "GameTab": new GameTab(),
     "FriendListTab": new FriendListTab(),
@@ -27,14 +26,5 @@ function tabSetup() {
     "PhoneTab": new PhoneTab(),
     "ServerStatusTab": new ServerStatusTab()
   }
-}
-
-function removeHrefsTwine() {
-  alert("removing hrefs");
-  const twLinks1 = document.querySelectorAll('tw-link');
-  alert(twLinks1.length);
-  for(let i = 0; i < twLinks1.length; i++) {
-    twLinks1.removeAttribute('href');
-    alert("removed attr");
-  }
+  tabHandler = new tabHandler(tabData, tabObjects, tabConfig);
 }

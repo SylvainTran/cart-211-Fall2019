@@ -5,7 +5,7 @@
 */
 .main__section--right{
   /* Display */
-  width: var(--section-size--default);
+  width: 85%;
   align-content: space-around;
   flex-direction: column;
 

@@ -4,7 +4,7 @@
 
 */
 class TabHandler {
-  constructor(tabObjects, tabData, tabConfig) {
+  constructor(tabData, tabObjects, tabConfig) {
     // Scene data: the objects and the config file
     this.tabObjects = tabObjects;
     this.tabData = tabData;
