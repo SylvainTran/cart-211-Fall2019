@@ -73,5 +73,5 @@ function getCharacterStats(){
 */
 function getFriendsList(){
 	console.log("Attempting to fetch the friends list from the data stored earlier...");
-	document.querySelector('.footer__console-status').innerHTML = consoleLogDefaultText + " " + "Friends List: " + sceneData.friendsListTab[0].firstName + ", " + sceneData.friendsListTab[1].firstName + inputField;
+	document.querySelector('.footer__console-status').innerHTML = consoleLogDefaultText + " " + "Friends List: " + sceneData.friendsListTab[0].firstName + ", " + sceneData.friendsListTab[1].firstName + ", " + sceneData.friendsListTab[2].firstName + inputField;
 }

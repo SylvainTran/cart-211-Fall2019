@@ -1,0 +1,11 @@
+/**
+  The Twine CSS for tw-story.
+
+*/
+.tw-story {
+    /* Display */
+    display: flex;
+    width: 65%;
+
+  }
+  
