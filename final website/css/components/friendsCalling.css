@@ -1,0 +1,13 @@
+/**
+  The footer's console status.
+
+*/
+.friendsCalling {
+  /* Font */
+  font-family: Consolas, monaco, monospace;
+  font-size: 5vw;
+
+  /* Colors */
+  color: black;
+  background-color: yellow;
+}

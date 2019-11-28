@@ -9,6 +9,8 @@
   <script src="js/main.js"></script>
   <script src="js/jQueryAjax.js"></script>
   <script src="js/getUserPrompt.js"></script>
+  <script src="js/rotatePic.js"></script>
+  <script src="js/serverStatus.js"></script>
   <script type="text/javascript" src="js/libraries/jquery-3.4.1.min.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Alata|Crimson+Text&display=swap" rel="stylesheet">
   <!-- p5.js Library script(s) -->
@@ -30,7 +32,7 @@
       <div class="header__banner__text">Duckguy Entertainment - Discursia Online</div>
     </div>
     <div class="bt bt--primary bt__bt--primary__server--login">Login</div>
-    <div class="bt bt--primary bt__bt--primary__server--status">Server Status: <span style="color:green">59 online!</span></div>
+    <div id="testServerStatus">Server Status: <span style="color:green">59 online!</span></div>
   </header>
   <div class="hero-image">
     <div class="hero-text">
@@ -64,7 +66,7 @@
       </div>
     </div>
     <div class="flexContainer"> <!-- Start of flex container -->
-      
+
       <div class="main__section--right">
         <div class="tabs--top-row">
           <button class="bt bt--tabs" onclick="getInventory();">Inventory</button>
@@ -81,7 +83,11 @@
           </div>
         </div>
       </div> <!-- Main section right end -->
-      <div class="main__section__game--friends-picture" onmousemove="rotatePic(this);"></div>
+      <div class="main__section__game--friends-picture"></div>
+      <div class="main__section__game--friends-calling"></div>
+      <audio style="display: none;"id="friendHello" controls>
+        <source src="sounds/hello.mp3" type="audio/mpeg">
+      </audio>
     </div> <!-- End of flex container -->
     <footer class="footer__console-status">
       Microsoft Windows [Version 10.0.17763.805] <br>
@@ -113,8 +119,8 @@
     [[Rip off the cables from the speakers.]]
     [[Throw an old sausage at the screen.]]
     [[Scream in agony again.]]
-    [[Sip some bubble tea.]]    
-    
+    [[Sip some bubble tea.]]
+
   </tw-passagedata>
   <tw-passagedata pid="3" name="Close the computer." tags="" position="NaN,NaN" size="100,100">
     You closed your computer. Congratulations. (+50 wisdom.)
@@ -138,13 +144,13 @@
   <tw-passagedata pid="9" name="Sip some bubble tea." tags="" position="NaN,NaN" size="100,100">
     The bubble tea is pretty nice.
     Yeah, it's so very good. Creamy and stuff. Mmmm.
-    
+
     You find yourself on your computer's desktop.
 
     [[Launch Twine.exe]]
     [[Launch Firefox.exe]]
-    [[Launch Discursia Online.exe]]        
-  </tw-passagedata>    
+    [[Launch Discursia Online.exe]]
+  </tw-passagedata>
   <tw-passagedata pid="10" name="Launch Twine.exe" tags="" position="NaN,NaN" size="100,100">
     The engine says you're already part of the system... No way to launch it again.
   </tw-passagedata>
@@ -153,17 +159,18 @@
 
     [[See who's online.]]
     [[Go to the pub.]]
-    [[Attack the nearest NPC.]]
-  </tw-passagedata>    
+    [[Murder the nearest NPC.]]
+  </tw-passagedata>
   <tw-passagedata pid="12" name="See who's online." tags="" position="NaN,NaN" size="100,100">
-    Your friend list in Discursia or your real life friend list?
+    You think for a long moment... The friend list in real life, or the one in Discursia?
+    You continue thinking... Is there a difference?
 
     [[Real life.]]
     [[Discursia.]]
-  </tw-passagedata>    
+  </tw-passagedata>
   <tw-passagedata pid="13" name="Discursia." tags="" position="NaN,NaN" size="100,100">
 
-    Send a message to: 
+    Send a message to:
 
     [[suspicious-Steak341]]
     [[lordsephiroth97]]
@@ -171,8 +178,62 @@
     [[imGOd333]]
     [[PlantsFromUrVenus58]]
     [[TheDarkWarrior]]
-    [[MrFullTimeStudent]]    
-  </tw-passagedata> 
+    [[MrFullTimeStudent]]
+  </tw-passagedata>
+  <tw-passagedata pid="14" name="suspicious-Steak341" tags="" position="NaN,NaN" size="100,100">
+    suspicious-Steak341 sent you a message back:
+
+    "Hey dude, nice getting back in the game... How about that raid tonight?"
+
+    [[Go raid with suspicious-Steak341 and the others.]]
+    [[Decline the invite.]]
+  </tw-passagedata>
+  <tw-passagedata pid="15" name="lordsephiroth97" tags="" position="NaN,NaN" size="100,100">
+    lordsephiroth97 left the chat room.
+  </tw-passagedata>
+  <tw-passagedata pid="16" name="Mimi-realmilf_45" tags="" position="NaN,NaN" size="100,100">
+    Mimi-realmilf_45 sent you a wink.
+
+    "Hey hey hey son"
+
+    [[Leave the chat room.]]
+  </tw-passagedata>
+  <tw-passagedata pid="17" name="imGOd333" tags="" position="NaN,NaN" size="100,100">
+    imGOd333 sent you a message back:
+
+    "yo im lvl 99 now im like a deity worship me now immediately"
+
+    [[Leave the chat room.]]
+  </tw-passagedata>
+  <tw-passagedata pid="18" name="PlantsFromUrVenus58" tags="" position="NaN,NaN" size="100,100">
+    PlantsFromUrVenus58 sent you a message back:
+
+    "I'm hungry. And Lonley. Oh man i like pets. I so want a new pet."
+
+    [[Leave the chat room.]]
+  </tw-passagedata>
+  <tw-passagedata pid="19" name="TheDarkWarrior" tags="" position="NaN,NaN" size="100,100">
+    TheDarkWarrior sent you a message back:
+
+    "...im the dark warrior... very strong..."
+
+    [[Leave the chat room.]]
+  </tw-passagedata>
+  <tw-passagedata pid="20" name="MrFullTimeStudent" tags="" position="NaN,NaN" size="100,100">
+    MrFullTimeStudent sent you a message back:
+
+    "Man are you good at advanced calculus, I've got like so much homework but I gotta play tonight instead of studying. I'm so busy I don't have a life"
+
+    [[Leave the chat room.]]
+  </tw-passagedata>
+  <tw-passagedata pid="21" name="Go to the pub." tags="" position="NaN,NaN" size="100,100">
+    You've gone to the pub.
+    It's time to enjoy yourself
+
+    (Also, everyone is happy and you've really finished the game.)
+
+    [[Game over.]]
+  </tw-passagedata>
 </tw-storydata>
 <!-- End of Twine Story !-->
 
