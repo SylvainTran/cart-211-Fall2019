@@ -9,7 +9,7 @@
 
   /* Alignment */
   align-content: space-around;
-  flex-direction: column;
+  flex-direction: row;
 
   /* HTML Box Position */
   padding: 0vw 0vw 0vw 0vw;

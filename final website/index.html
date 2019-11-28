@@ -58,18 +58,13 @@
     <div class="mainContainer">
     <div class="main__section__server-rules">
       <div class="main__section__server-rules__text">
-        Playing In The Browser: Look at your right!
+        Discursia Online
       </div>
       <div class="main__Section__game--left-display-text" style="text-align: center;">
       </div>
     </div>
     <div class="flexContainer"> <!-- Start of flex container -->
-      <div class="main__section--left">
-        <div class="main__section__game--left-display">
-          <div id="#"></div> <!-- p5 canvas -->
-        </div>
-      </div>
-
+      
       <div class="main__section--right">
         <div class="tabs--top-row">
           <button class="bt bt--tabs" onclick="getInventory();">Inventory</button>
@@ -77,23 +72,22 @@
           <button class="bt bt--tabs" onclick="getFriendsList();">Friends List</button>
         </div>
 
-        <div class="tabs--bottom-row">
-
-        </div>
-          <div class="main__section__game--right-display">
-            <div class="main__section__game--right-display--greetings">
-              Welcome to Discursia. You are currently offline. Click the tabs and then input the command in the console below. [Inputting not implemented yet.]
-              <!-- tw-story is where Twine inserts story data !-->
-              <tw-story></tw-story>
-            </div>
+        <div class="main__section__game--right-display">
+          <div class="main__section__game--right-display--greetings">
+            Welcome to Discursia. You are currently offline. Click the tabs and then input the command in the console below. [Inputting not implemented yet.]
+            <!-- tw-story is where Twine inserts story data !-->
+            <tw-story></tw-story>
+            <!-- Friends pictures appear here -->
           </div>
+        </div>
       </div> <!-- Main section right end -->
+      <div class="main__section__game--friends-picture">Pic here</div>
     </div> <!-- End of flex container -->
     <footer class="footer__console-status">
       Microsoft Windows [Version 10.0.17763.805] <br>
       (c) 2018 Microsoft Corporation. All rights reserved. <br> <br>
       <form>
-        C:\Users\jdesplan><input class="consoleInput" type="text" onchange="testCommand()"></input>
+        C:\Users\you><input class="consoleInput" type="text" onchange="testCommand()"></input>
       </form>
     </footer>
   </div> <!-- End of main container -->
@@ -119,9 +113,8 @@
     [[Rip off the cables from the speakers.]]
     [[Throw an old sausage at the screen.]]
     [[Scream in agony again.]]
-
-    Enter "hack computer" in the console to get through.
-
+    [[Sip some bubble tea.]]    
+    
   </tw-passagedata>
   <tw-passagedata pid="3" name="Close the computer." tags="" position="NaN,NaN" size="100,100">
     You closed your computer. Congratulations. (+50 wisdom.)
@@ -142,6 +135,44 @@
   <tw-passagedata pid="8" name="Plug back the cables." tags="" position="NaN,NaN" size="100,100">
     The sounds are back on. (+1 wisdom).
   </tw-passagedata>
+  <tw-passagedata pid="9" name="Sip some bubble tea." tags="" position="NaN,NaN" size="100,100">
+    The bubble tea is pretty nice.
+    Yeah, it's so very good. Creamy and stuff. Mmmm.
+    
+    You find yourself on your computer's desktop.
+
+    [[Launch Twine.exe]]
+    [[Launch Firefox.exe]]
+    [[Launch Discursia Online.exe]]        
+  </tw-passagedata>    
+  <tw-passagedata pid="10" name="Launch Twine.exe" tags="" position="NaN,NaN" size="100,100">
+    The engine says you're already part of the system... No way to launch it again.
+  </tw-passagedata>
+  <tw-passagedata pid="11" name="Launch Discursia Online.exe" tags="" position="NaN,NaN" size="100,100">
+    You're logged in.
+
+    [[See who's online.]]
+    [[Go to the pub.]]
+    [[Attack the nearest NPC.]]
+  </tw-passagedata>    
+  <tw-passagedata pid="12" name="See who's online." tags="" position="NaN,NaN" size="100,100">
+    Your friend list in Discursia or your real life friend list?
+
+    [[Real life.]]
+    [[Discursia.]]
+  </tw-passagedata>    
+  <tw-passagedata pid="13" name="Discursia." tags="" position="NaN,NaN" size="100,100">
+
+    Send a message to: 
+
+    [[suspicious-Steak341]]
+    [[lordsephiroth97]]
+    [[Mimi-realmilf_45]]
+    [[imGOd333]]
+    [[PlantsFromUrVenus58]]
+    [[TheDarkWarrior]]
+    [[MrFullTimeStudent]]    
+  </tw-passagedata> 
 </tw-storydata>
 <!-- End of Twine Story !-->
 

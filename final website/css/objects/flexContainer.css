@@ -20,6 +20,7 @@
   /* Display */
   display: flex;
   align-items: center;
-  flex-flow: colum;
-  flex-direction: column;
+  flex-flow: row;
+  flex-direction: row;
 }
+

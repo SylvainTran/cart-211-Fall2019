@@ -1,0 +1,24 @@
+/**
+  The side box holding the main game screen.
+
+*/
+.main__section__game--friends-picture {
+    /* Display */
+    display: flex;
+    width: 256px;
+    height: 256px;
+    flex-direction: row;
+
+    /* Colors */
+
+    /* Font */
+  
+    /* Alignment */
+  
+    /* HTML Box Position */
+  
+  
+    /* X, Y Flow Calibration */
+  
+  }
+  

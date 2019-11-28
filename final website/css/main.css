@@ -42,3 +42,5 @@
 @import "objects/heroImage.css";
 /* The greeter */
 @import "components/main__Section__game--left-display-text.css";
+/* Friends pics */
+@import "components/main__section__game--friends-picture.css";

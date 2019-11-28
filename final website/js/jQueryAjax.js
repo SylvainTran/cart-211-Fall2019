@@ -1,7 +1,7 @@
 let sceneData, sceneConfig;
 let consoleLogDefaultText = "Microsoft Windows [Version 10.0.17763.805] <br>" +
         "(c) 2018 Microsoft Corporation. All rights reserved. <br> <br>" +
-        "C:\\Users\\jdesplan>";
+        "C:\\Users\\you>";
 let inputField = "<br><br>C:> Enter command: <input class=\"consoleInput\" type=\"text\" style=\"background-color: black; color: white;\" onchange=\"testCommand();\">";
 let inventoryStatus;
 /*

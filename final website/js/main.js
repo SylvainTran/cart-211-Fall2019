@@ -11,7 +11,7 @@ let tabHandler;
 
 document.addEventListener("click", function() {
   let leftCanvasText = document.querySelector('.main__Section__game--left-display-text');
-  leftCanvasText.innerHTML = "Welcome, Joachim";
+  leftCanvasText.innerHTML = "Welcome, you";
 });
 /**
   Sets up a canvas and creates objects for the Human and three prey.
